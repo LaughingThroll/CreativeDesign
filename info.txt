@@ -1,0 +1,6 @@
+SCSS/SASS
+	autoprefixer
+Webpack for modules
+	babel-loader
+	
+BrowserSync

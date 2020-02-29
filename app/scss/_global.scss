@@ -1,0 +1,45 @@
+html {
+	box-sizing: border-box;
+	font-size: 14px;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: $textColor;
+}
+input,
+button,
+textarea,
+select {
+	border: none;
+}
+textarea {
+	resize: none;
+}
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}

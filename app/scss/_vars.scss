@@ -1,0 +1,19 @@
+$textColor: #777;
+$black: #000;
+
+
+@mixin resetUl {
+  list-style: none;
+	margin: 0;
+	padding: 0;
+}
+@mixin resetLink {
+  display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+}
+@mixin resetButton {
+	padding: 0;
+  background-color: transparent;
+	cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.footer {
+  text-align: center;
+  &__logo {
+    margin-bottom: 45px;
+  }
+  &-socials {
+    padding: 20px 0;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    &__list {
+      @include resetUl;
+    }
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: 50px;
+      } 
+    }
+    a {
+      @include resetLink;
+      color: $textColor;
+      padding: 0 5px;
+    }
+  }
+  &__copyright {
+   padding: 35px 0;
+   text-transform: uppercase;
+   line-height: 26px; 
+   letter-spacing: .25px;
+   span {
+     color: $black;
+   }
+  }
+}
+
