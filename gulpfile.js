@@ -102,7 +102,7 @@ gulp.task('export', function () {
 gulp.task('build', gulp.series('clean', 'export'))
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
+    gulp.watch('app/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/**/*.pug', gulp.parallel('pug'))
     gulp.watch(['app/**/*.js', '!app/js/main.min.js'], gulp.parallel('script'))
 });

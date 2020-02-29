@@ -1,5 +1,6 @@
 $textColor: #777;
 $black: #000;
+$borderColor: #e1e1e1;
 
 
 @mixin resetUl {
@@ -13,6 +14,7 @@ $black: #000;
 	cursor: pointer;
 }
 @mixin resetButton {
+	outline: none;
 	padding: 0;
   background-color: transparent;
 	cursor: pointer;
