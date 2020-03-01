@@ -1,0 +1,47 @@
+.big-banner {
+  padding: 18.6rem 0 3.9rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 650px;
+  
+}
+.slider-index {
+  position: relative;
+  .glider-arrow {
+    @include resetButton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    background-color: $black;
+    border-radius: 50%;
+    transition: all .3s;
+    &--prev {
+      left: -75px;
+    }
+    &--next {
+      right: -75px;
+    }
+    &.disabled {
+      border: 1px solid $white;
+      background-color: transparent;
+    }
+  }
+  .glider-dots {
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    right: 0; 
+  }
+  .glider-dot {
+    @include resetButton;
+    background-color: #fff;
+    &.active {
+      border: 3px solid $black;
+    }
+  } 
+} 

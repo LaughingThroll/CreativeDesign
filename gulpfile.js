@@ -61,14 +61,17 @@ gulp.task('script', function(){
 gulp.task('styleLibs', function(){
     return gulp.src([
       'node_modules/normalize.css/normalize.css',
+      'node_modules/glider-js/glider.css',
+     
     ])
       .pipe(concat('libs.min.css'))
       .pipe(cssmin())
       .pipe(gulp.dest('app/css'))
 });
+
 // gulp.task('scriptLibs', function(){
 //     return gulp.src([
-//       'node_modules/lodash._objecttypes/index.js'
+//       // 
 //     ])
 //       .pipe(concat('libs.js'))
 //       .pipe(gulp.dest('app/js'))
@@ -104,7 +107,7 @@ gulp.task('build', gulp.series('clean', 'export'))
 gulp.task('watch', function(){
     gulp.watch('app/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/**/*.pug', gulp.parallel('pug'))
-    gulp.watch(['app/**/*.js', '!app/js/main.min.js'], gulp.parallel('script'))
+    gulp.watch(['app/**/*.js', '!app/js/main.min.js', '!app/js/libs.js'], gulp.parallel('script'))
 });
 // 'scriptLibs',
 gulp.task('default', gulp.parallel('styleLibs', 'sass', 'watch', 'browser-sync'))

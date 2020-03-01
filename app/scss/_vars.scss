@@ -1,5 +1,6 @@
 $textColor: #777;
 $black: #000;
+$white: #fff;
 $borderColor: #e1e1e1;
 
 
@@ -18,4 +19,8 @@ $borderColor: #e1e1e1;
 	padding: 0;
   background-color: transparent;
 	cursor: pointer;
+}
+@mixin resetH1 {
+	margin: 0;
+	padding: 0;
 }
