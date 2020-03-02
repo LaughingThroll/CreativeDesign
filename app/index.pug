@@ -1,22 +1,9 @@
-<!doctype html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet")
-    link(rel="stylesheet" href="css/libs.min.css")
-    link(rel="stylesheet" href="css/style.min.css")
-  body
-    .wrapper
-      .content
-          include module/header/header.pug
-          include module/big-banner/big-banner.pug
-          include module/portfolio/portfolio.pug  
-          
-      include module/footer/footer.pug
+extends layout/main.pug
+block content
+  include module/big-banner/big-banner.pug
+  include module/portfolio/portfolio.pug  
+       
+  
 
-
-
-    script(src="js/main.min.js") 
+      
    
