@@ -1,0 +1,34 @@
+.team {
+  padding: 3.2rem 0 11rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 1 31%;
+  }
+  &__images {
+    @include resetLink;
+    display: block;
+    height: 430px;
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    background-size: cover;
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include resetLink;
+    @include resetMP;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $black;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  &__text {
+    line-height: 26px;
+  }
+
+}
