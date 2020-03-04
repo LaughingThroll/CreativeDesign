@@ -1,3 +1,4 @@
+include ../../layout/mixin/__icon-list.pug
 footer.footer
   .footer__logo
     .container
@@ -5,19 +6,7 @@ footer.footer
         img(src="images/logo.png")
   .footer-socials
     .container
-      ul.footer-socials__list
-        li
-          a(href="#").icon-facebook
-        li
-          a(href="#").icon-google
-        li
-          a(href="#").icon-twitter
-        li
-          a(href="#").icon-linkedin
-        li
-          a(href="#").icon-basketball
-        li
-          a(href="#").icon-pinterest-p
-        li
-          a(href="#").icon-instagram
+      ul.footer-socials__list.socials-list
+        +icon-list
+        
   .footer__copyright &#169; 2016 <span> Mulitix Theme </span> by ThemeForces. All Rights Reserved.

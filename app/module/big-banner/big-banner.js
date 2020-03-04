@@ -1,6 +1,6 @@
 import Glider from '../../../node_modules/glider-js/glider.js';
 
-new Glider(document.querySelector('.js-slider-index'), {
+let index = new Glider(document.querySelector('.js-slider-index'), {
   slidesToScroll: 1,
   slidesToShow: 1,
   arrows: {
@@ -9,7 +9,9 @@ new Glider(document.querySelector('.js-slider-index'), {
   },
   dots: '.glider-dots',
  
-})
+});
+
+export {index};
 
 
 

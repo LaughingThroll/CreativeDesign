@@ -1,0 +1,9 @@
+extends layout/main.pug
+block content
+  section.small-banner(style="background-image: url(images/banners/small-banner__portfolio-det.jpg)")
+    .container
+      .main-title.main-title--left
+        h1.main-title__title Latest project
+        .main-title__subtitle We deliver quality
+  include module/item-details/item-details.pug 
+  include module/related-works/related-works.pug     

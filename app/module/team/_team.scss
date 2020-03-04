@@ -1,5 +1,8 @@
 .team {
   padding: 3.2rem 0 11rem;
+  &__headline {
+    margin-bottom: 5.3rem;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -26,6 +29,9 @@
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 5px;
+  }
+  &__subtitle {
+    margin-bottom: 20px;
   }
   &__text {
     line-height: 26px;

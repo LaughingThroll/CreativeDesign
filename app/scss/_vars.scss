@@ -1,7 +1,9 @@
 $textColor: #777;
 $black: #000;
 $white: #fff;
+$green: #071f08;
 $borderColor: #e1e1e1;
+
 
 
 @mixin resetUl {
@@ -20,6 +22,8 @@ $borderColor: #e1e1e1;
   background-color: transparent;
 	cursor: pointer;
 }
+
+// TODO h1-h6
 @mixin resetMP {
 	margin: 0;
 	padding: 0;

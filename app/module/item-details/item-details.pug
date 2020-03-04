@@ -1,0 +1,52 @@
+include ../../layout/mixin/__icon-list.pug
+
+- var imagesSrc = ["background-image: url(images/item-details/item-details__1.jpg)", "background-image: url(images/item-details/item-details__2.jpg)", "background-image: url(images/item-details/item-details__3.jpg)", "background-image: url(images/item-details/item-details__4.webp)"]
+
+mixin block-details(title, text)
+  .descr-item__content-item.block-details
+    .block-details__title.inner__title #{title}
+    .block-details__subtext #{text}
+
+mixin images-item(src)
+  .descr-item__images-item(style=src)
+
+section.item-details
+  .container
+    .item-details__nav.nav-details
+      button(type="button" role="button" aria-label="Previous").nav-details__arrow.nav-details__arrow--prev Previous
+      button(type="button" role="button" aria-label="Next").nav-details__arrow.nav-details__arrow--next Next
+      button(type="button").nav-details__btn.js-nav-details__btn Show All
+    .item-details__content.js-slider__item-details
+      - for(let i = 0; i < 2; i++) 
+        .descr-item
+          .descr-item__content
+            //- TODO naming class
+            .descr-item__content-headline
+              h3.descr-item__content-title Pereira creative agency
+              .inner__title Branding design
+            .descr-item__content-subtext
+              .descr-item__content-box.descr-item__box.inner__title
+                .descr-item__box-date February 28,2015
+                .descr-item__box-like 324 likes
+              p.descr-item__content-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!
+            +block-details('Role on Project', 'Project Designer, Lead Designer, Markerting Head')
+            .descr-item__content-item.block-details
+              .block-details__title.inner__title Tags
+              .block-details__subtext
+                |
+                |
+                a(href="#") Mobile App,
+                |
+                |
+                a(href="#") UI/UX design 
+            .descr-item__content-item.block-details.descr-item__share
+              button(type="button").descr-item__share-btn 
+                span Share
+              ul.descr-item__share-list.socials-list
+                +icon-list
+          .descr-item__images
+            .descr-item__images-main
+            .descr-item__images-submain
+              - for(let i = 0; i < imagesSrc.length; i++) 
+                +images-item(imagesSrc[i])
+        

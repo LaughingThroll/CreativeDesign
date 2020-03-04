@@ -1,0 +1,10 @@
+- var imagesRelated = ['background-image: url(images/related-works/related-works__1.jpg)', 'background-image: url(images/related-works/related-works__2.jpg)', 'background-image: url(images/related-works/related-works__3.jpg)' ] 
+
+section.related-works
+  .container
+    .headline.related-works__headline 
+      h2.headline__title Related Works 
+      p.headline__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laboriosam animi repellendus optio iure possimus? Quia ad veritatis, molestias, provident officia reprehenderit assumenda esse dolorum nam, autem sequi! Est, adipisci!
+    .related-works__items
+      - for (let i = 0; i < 3; i++)
+          a(href='#' style=imagesRelated[i]).related-works__items-item

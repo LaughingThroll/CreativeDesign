@@ -1,0 +1,241 @@
+.item-details {
+  padding: 20px 0 10rem;
+  &__nav {
+    margin-bottom: 6.7rem;
+  }
+}
+
+.nav-details {
+  // text-align: right;
+  font-size: 13px;
+  &__btn {
+    @include resetButton;
+    display: block;
+    position: relative;
+    padding: 0 10px 0 25px;
+    margin: 0 40px 0 auto;
+    letter-spacing: .75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $green;
+    &::before {
+      content: '\f0ca';
+      font-family: 'icomoon';
+      position: absolute;
+      top: 0;
+      left: 0;
+    } 
+  }
+  &__arrow {
+    @include resetButton;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $green;
+    margin: 0 40px;
+    &::before {
+      font-family: 'icomoon';
+      position: absolute;
+      top: 0;
+    }
+    &--prev {
+      padding-left: 20px;
+      &::before {
+        content: '\f104';
+        left: 0;
+      }
+    }
+    &--next {
+      padding-right: 20px;
+      &::before {
+        content: '\f105';
+        right: 0;
+      }
+    }
+
+  }
+
+}
+
+.descr-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.descr-item__content {
+  max-width: 550px;
+  width: 100%;
+  &-headline {
+    margin-bottom: 2.15rem;
+  }
+  &-title {
+    @include resetMP;
+    text-transform: uppercase;
+    color: $black;
+    letter-spacing: 4px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  &-subtext {
+    padding: 1.8rem 0 4.3rem;
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: 2.85rem;
+  }
+  &-text {
+    @include resetMP;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+  }
+}
+
+.descr-item__box {
+  font-size: 14px;
+  margin-bottom: 2.85rem; 
+  &-date {
+    display: inline-block;
+  }
+  &-like {
+    display: inline-block;
+    position: relative;
+    margin-left: 60px;
+    padding-left: 20px;
+    cursor: pointer;
+    &::before {
+      content: '\f08a';
+      font-family: 'icomoon';
+      position: absolute;
+      top: -1px;
+      left: 0;
+    }
+  }
+}
+
+.block-details {
+  & + .block-details {
+    margin-top: 3.6rem;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;  
+  }
+  &__subtext {
+    a {
+      @include resetLink;
+      color: $textColor;
+    }
+    
+  }
+}
+
+.descr-item__share {
+  display: flex;
+  &-btn {
+    @include resetButton;
+    background-color: #707070;
+    color: $white;
+    width: 85px;
+    border-radius: 2px;
+    padding: 13px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    span {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: '\f1e0';
+        font-family: 'icomoon';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(18%);
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+  &-list {
+    font-size: 0;
+    margin-left: 14px;
+    li {
+      font-size: 16px;
+      height: 42px;
+      width: 42px;
+      background-color: #e1e1e1;
+      &:first-child {
+        position: relative;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -8px;
+          transform: translateY(125%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 8px 6px 0;
+          border-color: transparent #e1e1e1 transparent transparent;
+        }
+      }
+      &:first-child {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.descr-item__images {
+  max-width: 560px;
+  width: 100%;
+  height: 100%;
+  &-main {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 350px;
+    margin-bottom: 10px;
+  }
+  &-submain {
+    display: flex;
+  }
+  &-item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 135px;
+    height: 115px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0);
+      transition: all 1s;
+    }
+    &:hover::before {
+      background-color: rgba(#000, .5);
+    }
+    & + .descr-item__images-item {
+      margin-left: 10px;
+    }
+  }
+}
+
+

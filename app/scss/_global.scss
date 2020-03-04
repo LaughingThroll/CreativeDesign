@@ -88,13 +88,6 @@ textarea {
 	font-size: 16px;
 	letter-spacing: 0.25px;
 	font-weight: 700;
-	&--skills {
-		color: #2f302f;
-		margin-bottom: 15px;
-	}
-	&--team {
-		margin-bottom: 20px;
-	}
 }
 
 .headline {
@@ -102,7 +95,6 @@ textarea {
 	max-width: 615px;
 	width: 100%;
 	margin: 0 auto;
-	margin-bottom: 5.3rem;
 	&__title {
 		@include resetMP;
 		color: $black;
@@ -115,6 +107,17 @@ textarea {
 	&__text {
 		@include resetMP;
 		line-height: 26px;
+	}
+}
+
+.socials-list {
+	@include resetUl;
+	li {
+		display: inline-block;
+	}
+	a {
+		@include resetLink;
+    color: $textColor;
 	}
 }
 
