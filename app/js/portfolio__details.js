@@ -1,0 +1,1 @@
+import {itemDetails} from '../module/item-details/item-details'

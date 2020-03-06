@@ -8,14 +8,22 @@ const gulp = require('gulp'),
     cssmin = require('gulp-cssmin'),
     del = require('del'),
     pug = require('gulp-pug'),
-    webpack = require('webpack-stream');
+    webpack = require('webpack-stream'),
+    path = require('path');
 
 let isDev = true,
     isProd = !isDev;  
-
+   
 const webConfig = {
+  entry: {
+    index: path.resolve(__dirname, './app/js/index.js'), 
+    portfolio__details: path.resolve(__dirname, './app/js/portfolio__details.js'), 
+    // 'bundle-category': './entry-category.js',
+    // 'bundle-product': './entry-product.js',
+    // 'bundle-checkout': './entry-checkout.js',
+  },
   output: {
-    filename: 'main.min.js'
+    filename: '[name].min.js'
   },
   module: {
     rules: [
@@ -52,7 +60,7 @@ gulp.task('pug', function(){
 });
 
 gulp.task('script', function(){
-    return gulp.src('app/js/main.js')
+    return gulp.src('app/js/*.js')
       .pipe(webpack(webConfig))
       .pipe(gulp.dest('app/js'))
       .pipe(browserSync.reload({stream: true}))
@@ -68,14 +76,6 @@ gulp.task('styleLibs', function(){
       .pipe(cssmin())
       .pipe(gulp.dest('app/css'))
 });
-
-// gulp.task('scriptLibs', function(){
-//     return gulp.src([
-//       // 
-//     ])
-//       .pipe(concat('libs.js'))
-//       .pipe(gulp.dest('app/js'))
-// });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -107,7 +107,7 @@ gulp.task('build', gulp.series('clean', 'export'))
 gulp.task('watch', function(){
     gulp.watch('app/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/**/*.pug', gulp.parallel('pug'))
-    gulp.watch(['app/**/*.js', '!app/js/main.min.js', '!app/js/libs.js'], gulp.parallel('script'))
+    gulp.watch(['app/**/*.js', '!app/js/*.min.js'], gulp.parallel('script'))
 });
-// 'scriptLibs',
+
 gulp.task('default', gulp.parallel('styleLibs', 'sass', 'watch', 'browser-sync'))
