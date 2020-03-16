@@ -1,0 +1,10 @@
+extends layout/main.pug
+block content 
+  section.small-banner(style="background-image: url(images/banners/small-banner__about.webp)")
+    .container
+      .main-title.main-title--left
+        h1.main-title__title News about lian
+        .main-title__subtitle atest news & insight
+  include module/blog-content/blog-content.pug       
+block script
+  script(src="js/blog.min.js")        

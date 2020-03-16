@@ -1,4 +1,5 @@
 extends layout/main.pug
+
 block content
   section.small-banner(style="background-image: url(images/banners/small-banner__portfolio-det.jpg)")
     .container
@@ -8,4 +9,4 @@ block content
   include module/item-details/item-details.pug 
   include module/related-works/related-works.pug    
 block script 
-  script(src="js/portfolio__details.min.js")   
+  script(defer async src="js/portfolio__details.min.js")    

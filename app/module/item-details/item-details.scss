@@ -6,7 +6,6 @@
 }
 
 .nav-details {
-  // text-align: right;
   font-size: 13px;
   &__btn {
     @include resetButton;
@@ -238,4 +237,21 @@
   }
 }
 
+.js-slider__item-details--full {
+  .descr-item {
+    flex-direction: column-reverse;
+  }
+  .descr-item__images {
+    position: relative;
+    max-width: 520px;
+    &-submain {
+      display: none;
+    }
+  }
+  .descr-item__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 

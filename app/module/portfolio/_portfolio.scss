@@ -75,17 +75,4 @@
       @include resetButton;
     }
   }
-  &__btn {
-    @include resetButton;
-    width: 125px;
-    padding: 5px 0;
-    border-radius: 1px;
-    background-color: #959595;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: .50px;
-  }
 } 

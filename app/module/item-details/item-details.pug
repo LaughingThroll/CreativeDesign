@@ -17,7 +17,7 @@ section.item-details
       button(type="button" role="button" aria-label="Next").nav-details__arrow.nav-details__arrow--next Next
       button(type="button").nav-details__btn.js-nav-details__btn Show All
     .item-details__content.js-slider__item-details
-      - for(let i = 0; i < 2; i++) 
+      - for(let i = 0; i < 6; i++) 
         .descr-item
           .descr-item__content
             //- TODO naming class
@@ -45,8 +45,9 @@ section.item-details
               ul.descr-item__share-list.socials-list
                 +icon-list
           .descr-item__images
-            .descr-item__images-main
+            .descr-item__images-main(style="background-image: url(images/item-details/item-details__1.jpg)")
             .descr-item__images-submain
               - for(let i = 0; i < imagesSrc.length; i++) 
                 +images-item(imagesSrc[i])
+    
         

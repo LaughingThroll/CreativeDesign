@@ -18,9 +18,7 @@ const webConfig = {
   entry: {
     index: path.resolve(__dirname, './app/js/index.js'), 
     portfolio__details: path.resolve(__dirname, './app/js/portfolio__details.js'), 
-    // 'bundle-category': './entry-category.js',
-    // 'bundle-product': './entry-product.js',
-    // 'bundle-checkout': './entry-checkout.js',
+    blog: path.resolve(__dirname, './app/js/blog.js') 
   },
   output: {
     filename: '[name].min.js'
