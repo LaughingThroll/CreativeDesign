@@ -6,7 +6,7 @@ const jsSliderItemDet = document.querySelector('.js-slider__item-details')
 const gliderTrack = jsSliderItemDet.getElementsByClassName('glider-track')
 const descrContent = document.querySelectorAll('.descr-item__content')
 const descrImages = document.querySelectorAll('.descr-item__images')
-const descrItem = document.querySelectorAll('.descr-item')
+const descrItem = document.getElementsByClassName('descr-item')
 const newWrapperNode = document.getElementsByClassName('wrapper-item')
 const newScreenSlider = 'js-slider__item-details--full';
 
@@ -29,42 +29,42 @@ const removeClass = (name) => {
 }
 
 const insertElem = (parent, child) => {
-  for (let i = 0; i < parent.length; i++) {
-    parent[i].insertAdjacentElement('afterbegin', child[i])
+  for(let i = 0; i < parent.length; i++) {
+   parent[i].insertAdjacentElement('afterbegin', child[i])
   }
-}
+}  
 // console.log(gliderTrack[0].childNodes)
 const handlerAdd = () => {
-
+  
   addClass(newScreenSlider)
 
   insertElem(descrImages, descrContent)
 
   let descrItemLength = Math.ceil(descrItem.length / 4)
-
-  for (let i = descrItemLength; i > 0; i--) {
-
+  
+  for (let g = 0; g < descrItemLength; g++) {
     let itemWrapperEle = document.createElement('div')
     itemWrapperEle.setAttribute('class', 'wrapper-item')
     gliderTrack[0].insertAdjacentElement('afterbegin', itemWrapperEle)
-
-    gliderTrack[0].childNodes.forEach(f => {
-      
-      if ((!f.classList.contains('wrapper-item'))  && (!newWrapperNode[0].length == 4)) {
-        // TODO не могу сделать так чтобы дети брались только из glider-track, печалька(
-        for (let k = 0; k < 4; k++) {
-          newWrapperNode[0].insertAdjacentElement('afterbegin', descrItem[k])
-        }
-      } 
-    }) 
   }
-}
+  let arr = [...descrItem]
+  console.log(arr)
+
+    arr.forEach(child => {
+      if ((!child.parentElement.classList.contains('wrapper-item')) && (newWrapperNode[0].length !== 4)) {
+        newWrapperNode[1].insertAdjacentElement('afterbegin', child.slice)
+       } else {
+        child.parentElement.nextElementSibling
+        newWrapperNode[0].insertAdjacentElement('afterbegin', child)
+       }
+    
+    });
+  }
 
 
 const handlerRemove = () => {
   removeClass(newScreenSlider)
   insertElem(descrItem, descrContent)
-
 }
 
 navDetBtn.addEventListener('click', function () {
@@ -72,7 +72,7 @@ navDetBtn.addEventListener('click', function () {
 })
 
 export { gliderDetails };
-// });
+
 
 
 

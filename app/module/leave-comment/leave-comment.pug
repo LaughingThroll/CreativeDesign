@@ -1,0 +1,12 @@
+section.leave-comment
+  .container 
+    .headline.leave-comment__headline
+      h2.headline__title Leave a comment
+    form(action="#" method="POST").leave-comment__form.form-comment
+      .form-comment__input
+        input(type="text" placeholder="Name").default__input.default__input--active
+        input(type="text" placeholder="Email").default__input
+        input(type="url" placeholder="Website").default__input
+      textarea(placeholder="Message").form-comment__textarea.default__input
+      button(type="submit").send-message__btn Send Message   
+      

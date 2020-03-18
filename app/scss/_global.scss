@@ -101,6 +101,7 @@ textarea {
 	line-height: 20px;
 	letter-spacing: .50px;
 }
+
 .inner__title {
 	@include resetMP;
 	font-size: 16px;
@@ -139,6 +140,34 @@ textarea {
 	}
 }
 
-.blog-aside__items {
-	padding: 0 25px;
+// single-post 
+
+.default__input {
+	height: 38px;
+	width: 250px;
+	border: 1px solid #e1e1e1;
+	padding: 0 10px;
+	border-radius: 2px;
+	outline: none;
+	&::placeholder {
+		font-style: italic;
+	}
+	&:focus::placeholder {
+		font-size: 0;
+	}
+	&--active {
+		border-left-width: 4px;
+	}
+}
+
+.send-message__btn {
+	@include resetButton;
+	width: 195px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	border-radius: 2px;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
 }
