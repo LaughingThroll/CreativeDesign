@@ -1,0 +1,34 @@
+mixin info-contact__work(title, subtitle)
+  .info-contact__work
+    .info-contact__title.inner__title #{title}
+    span.info-contact__work-subtitle #{subtitle}
+mixin info-contact__phone(title, number)
+  .info-contact__phone
+    .info-contact__title.inner__title #{title}     
+    a(href='tel:380660653578').info-contact__phone-number #{number}      
+section.contact
+  .contact-info
+    .container
+      .contact-info__inner
+        .contact-info__text.info-contact
+          .info-contact__headline
+            h3.info-contact__headline-title Office Info
+            .info-contact__headline-subtext People Behind the Succses of our Company
+          +info-contact__work('Office Hours:', 'Mon-Friday 8am - 10pm')
+          .info-contact__work
+            .info-contact__title.inner__title Address:
+            span.info-contact__work-subtitle
+              a(href="#") Igbalangao,
+              a(href="#") Bugasong,
+              a(href="#") Antique
+          +info-contact__phone('Tell:', '123-456-7890')
+          +info-contact__phone('Fax:', '123-456-7890')
+        form.contact-info__form.info-form
+          .info-form__input
+            input.default__input.default__input--active(type="text", placeholder="Name")
+            input.default__input(type="email", placeholder="Email")
+          textarea.info-form__textarea.default__input(type="text", placeholder="Message")
+          button(type="submit").send-message__btn Send Message
+  .container-fluid
+    #map
+ 

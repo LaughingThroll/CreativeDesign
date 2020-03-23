@@ -1,0 +1,14 @@
+extends layout/main.pug
+block content
+  
+  section.small-banner(style="background-image: url(images/banners/small-banner__single-post.jpg)")
+    .container
+      .main-title.main-title--left
+        h1.main-title__title Get in Touch
+        .main-title__subtitle Contact us Today
+  include module/contact/contact.pug 
+  include module/our-value/our-value.pug 
+
+block script  
+  script(src="js/contact.min.js" )
+  

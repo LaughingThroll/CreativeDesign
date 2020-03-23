@@ -1,0 +1,93 @@
+.contact {
+  padding: 5.7rem 0 4.3rem;
+  
+} 
+
+.contact-info {
+  padding-bottom: 5.7rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }  
+}
+
+.info-contact {
+  &__headline {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    color: #000;
+    position: relative;
+    &-title {
+      // TODO fz
+      @include resetMP;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    &-subtext {
+      font-weight: 300;
+    }
+    &::before {
+      content: '';
+      height: 1px;
+      width: 60px;
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.info-contact__title {
+  color: #000;
+  display: inline-block;
+  letter-spacing: .25px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.info-contact__work {
+  margin-bottom: 30px;
+  &-subtitle {
+    font-size: 15px;
+    a {
+      @include resetLink;
+      color: $textColor;
+      margin-right: 5px;
+    }
+  }
+}
+
+.info-contact__phone {
+  &-number {
+    @include resetLink; 
+    color: $textColor;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.info-form {
+  max-width: 750px;
+  width: 100%;
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    input {
+      width: 360px;   
+    }
+  }
+  &__textarea {
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+}
+#map {
+  width: 100%;
+  min-height: 360px;
+}

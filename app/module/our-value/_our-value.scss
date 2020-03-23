@@ -1,0 +1,35 @@
+.our-value {
+  padding-bottom: 7.8rem;
+  &__headline {
+    margin-bottom: 4.3rem;
+  } 
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.our-value__item {
+  max-width: 360px;
+  width: 100%;
+  &-images {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 245px;
+    margin-bottom: 20px;
+  }
+  &-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 2.1rem;
+    letter-spacing: 4px;
+  }
+  &-text {
+
+    font-weight: 500;
+  }
+}

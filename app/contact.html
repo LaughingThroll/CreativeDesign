@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&amp;display=swap&amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/libs.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <header class="header">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__logo"><a href="#"><img src="images/logo.png"/></a></div>
+              <nav class="header__nav">
+                <ul class="header__list">
+                  <li><a class="header__link header__link--active" href="#" target="_blank">Home </a></li>
+                  <li><a class="header__link" href="./about" target="_blank">About                                               </a></li>
+                  <li><a class="header__link" href="./portfolio" target="_blank">Portfolio </a></li>
+                  <li><a class="header__link" href="./blog" target="_blank">BLOG</a></li>
+                  <li><a class="header__link" href="./contact" target="_blank">Contact</a></li>
+                </ul>
+              </nav>
+              <button class="header__search js-header__search" type="button"></button>
+              <button class="burger__menu js-burger__menu burger__menu--active" type="button"></button>
+            </div>
+          </div>
+        </header>
+        <section class="small-banner" style="background-image: url(images/banners/small-banner__single-post.jpg)">
+          <div class="container">
+            <div class="main-title main-title--left">
+              <h1 class="main-title__title">Get in Touch</h1>
+              <div class="main-title__subtitle">Contact us Today</div>
+            </div>
+          </div>
+        </section>
+        <section class="contact">
+          <div class="contact-info">
+            <div class="container">
+              <div class="contact-info__inner">
+                <div class="contact-info__text info-contact">
+                  <div class="info-contact__headline">
+                    <h3 class="info-contact__headline-title">Office Info</h3>
+                    <div class="info-contact__headline-subtext">People Behind the Succses of our Company</div>
+                  </div>
+                          <div class="info-contact__work">
+                            <div class="info-contact__title inner__title">Office Hours:</div><span class="info-contact__work-subtitle">Mon-Friday 8am - 10pm</span>
+                          </div>
+                  <div class="info-contact__work">
+                    <div class="info-contact__title inner__title">Address:</div><span class="info-contact__work-subtitle"><a href="#">Igbalangao,</a><a href="#">Bugasong,</a><a href="#">Antique</a></span>
+                  </div>
+                          <div class="info-contact__phone">
+                            <div class="info-contact__title inner__title">Tell:     </div><a class="info-contact__phone-number" href="tel:380660653578">123-456-7890      </a>
+                          </div>
+                          <div class="info-contact__phone">
+                            <div class="info-contact__title inner__title">Fax:     </div><a class="info-contact__phone-number" href="tel:380660653578">123-456-7890      </a>
+                          </div>
+                </div>
+                <form class="contact-info__form info-form">
+                  <div class="info-form__input">
+                    <input class="default__input default__input--active" type="text" placeholder="Name"/>
+                    <input class="default__input" type="email" placeholder="Email"/>
+                  </div>
+                  <textarea class="info-form__textarea default__input" type="text" placeholder="Message"></textarea>
+                  <button class="send-message__btn" type="submit">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div id="map"></div>
+          </div>
+        </section>
+        <section class="our-value">
+          <div class="container"> 
+            <div class="headline our-value__headline">
+              <h2 class="headline__title">Our Values</h2>
+              <p class="headline__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae accusamus alias animi quisquam iusto nisi quos corrupti fuga similique sit ab quaerat nihil id, autem dignissimos suscipit placeat laborum distinctio?</p>
+            </div>
+            <div class="our-value__items"> 
+              <div class="our-value__item"> 
+                <div class="our-value__item-images" style="background-image: url(images/our-value/__1.jpg)"></div>
+                <div class="our-value__item-title">Who we are</div>
+                <div class="our-value__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit qui rem ea asperiores, sed necessitatibus inventore culpa, magnam aspernatur omnis minus itaque? Itaque id est dicta magni nemo similique perspiciatis? </div>
+              </div>
+              <div class="our-value__item"> 
+                <div class="our-value__item-images" style="background-image: url(images/our-value/__2.jpg)"></div>
+                <div class="our-value__item-title">Our Vision</div>
+                <div class="our-value__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit qui rem ea asperiores, sed necessitatibus inventore culpa, magnam aspernatur omnis minus itaque? Itaque id est dicta magni nemo similique perspiciatis? </div>
+              </div>
+              <div class="our-value__item"> 
+                <div class="our-value__item-images" style="background-image: url(images/our-value/__3.jpg)"></div>
+                <div class="our-value__item-title">Our mission</div>
+                <div class="our-value__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit qui rem ea asperiores, sed necessitatibus inventore culpa, magnam aspernatur omnis minus itaque? Itaque id est dicta magni nemo similique perspiciatis? </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__logo">
+          <div class="container"><a href="#"><img src="images/logo.png"/></a></div>
+        </div>
+        <div class="footer-socials">
+          <div class="container">
+            <ul class="footer-socials__list socials-list">
+                    <li><a class="icon-facebook" href="#"></a></li>
+                    <li><a class="icon-google" href="#"></a></li>
+                    <li><a class="icon-twitter" href="#"></a></li>
+                    <li><a class="icon-linkedin" href="#"></a></li>
+                    <li><a class="icon-basketball" href="#"></a></li>
+                    <li><a class="icon-pinterest-p" href="#"></a></li>
+                    <li><a class="icon-instagram" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">&#169; 2016 <span> Mulitix Theme </span> by ThemeForces. All Rights Reserved.</div>
+      </footer>
+    </div>
+  </body>
+  <script src="js/contact.min.js"></script>
+</html>

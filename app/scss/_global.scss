@@ -32,6 +32,10 @@ textarea {
 	margin: 0 auto;
 	padding: 0 15px;
 }
+.container-fluid {
+	margin: 0 auto;
+	max-width: 1920px;
+}
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -126,6 +130,7 @@ textarea {
 	&__text {
 		@include resetMP;
 		line-height: 26px;
+		font-weight: 500;
 	}
 }
 
