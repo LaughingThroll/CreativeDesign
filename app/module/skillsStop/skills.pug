@@ -1,3 +1,18 @@
+- var skillItem = {
+    title: "Branding",
+    stylePercent: 'width: 90%',
+    textPercent:'90%'
+}
+
+mixin skill-our__item(title, stylePercent, textPercent)
+  .skill-our__item
+    h5.skill-our__title.inner__title #{title} 
+    .skill-our__progress 
+      .skill-our__progress-line(style=stylePercent)
+        .skill-our__progress-circle
+        .skill-our__progress-percent #{textPercent}
+
+
 section.skills
   .container
     .skills__inner
@@ -12,6 +27,8 @@ section.skills
           p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
         .skill-our 
           h3.small-title Our Skills
+          //- - for(let i = 0; i < 1; i++)
+          //-   +skill-our__item(skillItem.title, skillItem.stylePercent, skillItem.textPercent)
           .skill-our__item
             h5.skill-our__title.inner__title Branding
             .skill-our__progress 

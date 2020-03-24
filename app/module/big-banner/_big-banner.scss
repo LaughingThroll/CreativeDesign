@@ -4,9 +4,8 @@
   background-position: center center;
   background-size: cover;
   min-height: 650px;
-  
 }
-.slider-index {
+.big-banner__slider {
   position: relative;
   .glider-arrow {
     @include resetButton;

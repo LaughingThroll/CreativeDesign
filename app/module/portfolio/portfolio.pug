@@ -1,3 +1,4 @@
+- var images = ["images/portfolio/__1.jpg", "images/portfolio/__2.jpg", "images/portfolio/__3.jpg", "images/portfolio/__4.jpg", "images/portfolio/__5.jpg", "images/portfolio/__6.jpg", "images/portfolio/__7.jpg", "images/portfolio/__8.jpg", "images/portfolio/__9.jpg", "images/portfolio/__10.jpg"]; 
 section.portfolio
   .portfolio-nav
     .container
@@ -18,67 +19,14 @@ section.portfolio
           button(class="portfolio-list__btn" type="button") Branding 
   .portfolio-gallery
     .container
-      .portfolio-gallery__inner
-        .portfolio-gallery__item
-           picture
-             img(src="images/portfolio/1.jpg" alt="images")
-           .portfolio-gallery__description
-             button(type="button")
-               img(src="images/icon/plus-icon.svg", alt="")      
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/2.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/3.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/4.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="") 
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/5.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/6.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/7.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-          picture
-            img(src="images/portfolio/8.jpg" alt="images")
-          .portfolio-gallery__description
-            button(type="button")
-              img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-            picture
-              img(src="images/portfolio/9.jpg" alt="images")
-            .portfolio-gallery__description
-              button(type="button")
-                img(src="images/icon/plus-icon.svg", alt="")
-        .portfolio-gallery__item
-            picture
-              img(src="images/portfolio/10.jpg" alt="images")
-            .portfolio-gallery__description
-              button(type="button")
-                img(src="images/icon/plus-icon.svg", alt="")                                                          
+      .portfolio-gallery__items
+        - for(let i = 0; i < 10; i++)
+          .portfolio-gallery__item
+             picture
+               img(src=images[i] alt="images")
+             .portfolio-gallery__item-description
+               button(type="button")
+                 img(src="images/icon/plus-icon.svg", alt="")                                                              
       button(type="button").load__btn Load more       
 
 

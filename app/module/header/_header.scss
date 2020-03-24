@@ -2,18 +2,16 @@
   box-shadow: 0px 2px 4.75px 0.25px rgba(0, 0, 0, 0.15);
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 90px;
   }
-  &__nav {
-    margin-left: auto;
-  }
   &__list {
     @include resetUl;
+    display: flex;
   }
-  li {
-    display: inline-block;
+  &__logo {
+    margin-right: auto;
   }
   &__link {
     @include resetLink;

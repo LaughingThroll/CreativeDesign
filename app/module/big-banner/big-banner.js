@@ -1,6 +1,6 @@
 import Glider from '../../../node_modules/glider-js/glider.js';
 
-let index = new Glider(document.querySelector('.js-slider-index'), {
+let index = new Glider(document.querySelector('#js-big-banner__slider'), {
   slidesToScroll: 1,
   slidesToShow: 1,
   arrows: {

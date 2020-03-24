@@ -1,5 +1,8 @@
+- var title = ['Lian Creative Agency', 'Lian Creative Agency2', 'Lian Creative Agency3'];
+- var subtitle = ['Minimal frelance portfolio', 'Minimal frelance portfolio10', 'Minimal frelance portfolio12'] 
+
 mixin slider-index__item(title, subtitle)
-  .slider-index__item.glide__slide
+  .big-banner__slider-item.glide__slide
     .main-title
       h1.main-title__title #{title}
       .main-title__subtitle #{subtitle}
@@ -7,11 +10,10 @@ mixin slider-index__item(title, subtitle)
 
 section.big-banner(style="background-image: url(images/banners/index-banner.jpg)")
   .container
-    .slider-index
-      .js-slider-index
-        +slider-index__item('Lian Creative Agency', 'Minimal frelance portfolio')
-        +slider-index__item('Lian Creative Agency2', 'Minimal frelance portfolio10')
-        +slider-index__item('Lian Creative Agency3', 'Minimal frelance portfolio12')   
+    .big-banner__slider
+      #js-big-banner__slider
+        - for (let i= 0; i < 3; i++)
+          +slider-index__item(title[i], subtitle[i]) 
       button(type="button" role="button" aria-label="Previous").glider-arrow.glider-arrow--prev
         img(src="images/icon/left-arrow.png") 
       button(type="button" role="button" aria-label="Next").glider-arrow.glider-arrow--next

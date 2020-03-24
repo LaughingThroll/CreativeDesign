@@ -1,6 +1,7 @@
 .footer {
   text-align: center;
   &__logo {
+    display: inline-block;
     margin-bottom: 45px;
   }
   &-socials {
@@ -9,7 +10,7 @@
     border-bottom: 1px solid #ebebeb;
     &__list {
       li + li {
-          margin-left: 50px;
+        margin-left: 50px;
       }
       a {
         padding: 0 5px;
@@ -21,7 +22,8 @@
    text-transform: uppercase;
    line-height: 26px; 
    letter-spacing: .25px;
-   span {
+   span, a {
+     @include resetLink;
      color: $black;
    }
   }

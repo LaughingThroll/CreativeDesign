@@ -18,6 +18,8 @@ body {
 	color: $textColor;
 	height: 100%;
 }
+
+// start reset CSS
 input,
 button,
 textarea,
@@ -26,6 +28,9 @@ select {
 }
 textarea {
 	resize: none;
+}
+img {
+	display: block;
 }
 .container {
 	max-width: 1170px;
@@ -47,13 +52,20 @@ textarea {
 .footer {
 	flex: 0 0 auto;
 }
+//  end reset CSS
+// Logotype common
+.logo {
+	img {
+		display: block;
+	}
+}
 
+// Headline title in site
 .main-title {
 	text-align: center;
 	max-width: 700px;
 	margin: 0 auto;
 	text-transform: uppercase;
-	
 	&--left {
 		max-width: 600px;
 		margin: 0;
@@ -82,6 +94,8 @@ textarea {
 	}
 }
 
+
+//
 .small-title {
 	@include resetMP;
 	font-size: 1.2rem;
