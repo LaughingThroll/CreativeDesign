@@ -8,19 +8,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  &__item {
-    flex: 0 1 31%;
-  }
-  &__images {
+}
+
+.team__item {
+  flex: 0 1 31%;
+  &-images {
     @include resetLink;
     display: block;
     height: 430px;
     background-repeat: no-repeat;
     background-position: center 0%;
     background-size: cover;
-    margin-bottom: 30px;
+    margin-bottom: 2.1rem;
   }
-  &__title {
+  &-title {
     @include resetLink;
     @include resetMP;
     letter-spacing: 4px;
@@ -30,11 +31,10 @@
     font-weight: 300;
     margin-bottom: 5px;
   }
-  &__subtitle {
-    margin-bottom: 20px;
+  &-subtitle {
+    margin-bottom: 1.4rem;
   }
-  &__text {
+  &-text {
     line-height: 26px;
   }
-
 }

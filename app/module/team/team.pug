@@ -1,24 +1,25 @@
+- let images = ["background-image: url(../images/skills/team/__1.jpg);", "background-image: url(../images/skills/team/__2.jpg);", "background-image: url(../images/skills/team/__3.jpg);"];
+
+- let teamTitle = ['Lian Joy', 'Joy Lian', 'LiLi'];
+
+- let subtitle = ['CEO/Founder', 'CEO/Founder', 'CEO/Founder'];
+
+- let text = ['NoLorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci', 'NoLorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci', 'NoLorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci'];
+
+mixin team__item(images, title, subtitle, text)
+  .team__item
+    a.team__item-images(href="#" style=images)
+    a.team__item-title(href="#") #{title}
+    .team__item-subtitle.inner__title #{subtitle}
+    p.team__item-text #{text}  
 section.team
   .container
     .headline.team__headline 
       h2.headline__title Awesome Team
       p.headline__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
     .team__inner
-      .team__item
-        a.team__images(href="#" style="background-image: url(../images/team/1.jpg);")
-        a.team__title(href="#") Lian Joy
-        .team__subtitle.inner__title CEO/Founder
-        p.team__text Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci  
-      .team__item
-        a.team__images(href="#" style="background-image: url(../images/team/2.jpg);")
-        a.team__title(href="#") Lian Joy
-        .team__subtitle.inner__title CEO/Founder
-        p.team__text Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci 
-      .team__item
-        a.team__images(href="#" style="background-image: url(../images/team/3.jpg);")
-        a.team__title(href="#") Lian Joy
-        .team__subtitle.inner__title CEO/Founder
-        p.team__text Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit, sed diam nonu mmy nibh euis mod tinci          
+      - for (let i = 0; i < images.length; i++)
+        +team__item(images[i], teamTitle[i], subtitle[i], text[i])
 
 
 

@@ -20,7 +20,7 @@ section.portfolio
   .portfolio-gallery
     .container
       .portfolio-gallery__items
-        - for(let i = 0; i < 10; i++)
+        - for(let i = 0; i < images.length; i++)
           .portfolio-gallery__item
              picture
                img(src=images[i] alt="images")

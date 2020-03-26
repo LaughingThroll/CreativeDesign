@@ -1,17 +1,29 @@
-import Glider from '../../../node_modules/glider-js/glider.js';
+import Swiper from '../../../node_modules/swiper/js/swiper.js';
 
-let index = new Glider(document.querySelector('#js-big-banner__slider'), {
-  slidesToScroll: 1,
-  slidesToShow: 1,
-  arrows: {
-    prev: '.glider-arrow--prev',
-    next: '.glider-arrow--next'
-  },
-  dots: '.glider-dots',
- 
-});
+let bigBannerSlider = document.querySelector('#js-big-banner__slider');
+  let opt = {
+    // cssMode: true,
+    // effect: 'fade',
+    spaceBetween: 150,
+    navigation: {
+      nextEl: '.big-banner__slider-arrow--next',
+      prevEl: '.big-banner__slider-arrow--prev',
+    },
+    pagination: {
+      el: '.big-banner__slider-dots',
+      clickable: true,
+    },
+   
+  }
 
-export {index};
+  let indexSlider = () => {
+    new Swiper(bigBannerSlider, opt);
+  }
+export{ indexSlider }
+
+
+
+
 
 
 

@@ -6,6 +6,10 @@
     align-items: center;
     height: 90px;
   }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
   &__list {
     @include resetUl;
     display: flex;
@@ -35,7 +39,7 @@
       }  
     }
   }
-  .header__search {
+  &__search {
     @include resetButton;
     margin-left: 25px;
     width: 13px;
@@ -47,11 +51,41 @@
       color: $textColor;
       position: absolute;
       top: -2px;
-      left: 0; 
+      right: 0; 
     }
   }
-  .burger__menu {
-    @include resetButton;
-    display: none;
+}
+
+.burger__menu {
+  @include resetButton;
+  display: none;
+  width: 30px;
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #000;
+    transition: all .3s;
+  }
+ 
+  &--active {
+    span {
+      transition: all .3s;
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: left top; 
+        width: 24px;
+      }
+      &:nth-child(2) {
+        width: 0px; 
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: left bottom; 
+        width: 24px;
+      }
+    }
   }
 }
+

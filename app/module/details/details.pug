@@ -1,0 +1,52 @@
+include ../../layout/mixin/__icon-list.pug
+
+- var imagesSrc = ["background-image: url(images/details/__1.jpg)", "background-image: url(images/details/__2.jpg)", "background-image: url(images/details/__3.jpg)", "background-image: url(images/details/__4.webp)"]
+
+mixin block-details(title, text)
+  .item-det__content-item.item-tags
+    .item-tags__title.inner__title #{title}
+    .item-tags__subtext #{text}
+
+mixin images-item(src)
+  .item-det__images-item(style=src)
+
+section.details
+  .container
+    .details__nav.nav-details
+      button(type="button" role="button" aria-label="Previous").nav-details__arrow.nav-details__arrow--prev Previous
+      button(type="button" role="button" aria-label="Next").nav-details__arrow.nav-details__arrow--next Next
+      button(type="button").nav-details__btn#js-nav-details__btn Show All
+    .details__content#js-slider__details.details__item
+      - for(let i = 0; i < 6; i++) 
+        .details__item.item-det
+          .item-det__content
+            .item-det__content-headline
+              h3.item-det__content-title Pereira creative agency
+              .inner__title Branding design
+            .item-det__content-subtext
+              .item-det__content-box.item-det__box.inner__title
+                .item-det__box-date February 28,2015
+                .item-det__box-like 324 likes
+              p.item-det__content-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!
+            +block-details('Role on Project', 'Project Designer, Lead Designer, Markerting Head')
+            .item-det__content-item.item-tags
+              .item-tags__title.inner__title Tags
+              .item-tags__subtext
+                |
+                |
+                a(href="#") Mobile App,
+                |
+                |
+                a(href="#") UI/UX design 
+            .item-det__content-item.item-tags.item-det__share
+              button(type="button").item-det__share-btn 
+                span Share
+              ul.item-det__share-list.socials-list
+                +icon-list
+          .item-det__images
+            .item-det__images-main(style="background-image: url(images/details/__1.jpg)")
+            .item-det__images-submain
+              - for(let i = 0; i < imagesSrc.length; i++) 
+                +images-item(imagesSrc[i])
+    
+        

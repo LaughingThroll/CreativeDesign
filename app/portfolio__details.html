@@ -15,16 +15,19 @@
           <div class="container">
             <div class="header__inner"><a class="header__logo logo" href="#"><img src="images/logo.png"/></a>
               <nav class="header__nav">
-                <ul class="header__list">
+                <ul class="header__list" id="js-header__list">
                   <li><a class="header__link header__link--active" href="#" target="_blank">Home </a></li>
-                  <li><a class="header__link" href="./about" target="_blank">About                                               </a></li>
-                  <li><a class="header__link" href="./portfolio" target="_blank">Portfolio </a></li>
-                  <li><a class="header__link" href="./blog" target="_blank">BLOG</a></li>
-                  <li><a class="header__link" href="./contact" target="_blank">Contact</a></li>
+                  <li><a class="header__link" href="#" target="_blank">About                                               </a></li>
+                  <li><a class="header__link" href="#" target="_blank">Portfolio </a></li>
+                  <li><a class="header__link" href="#" target="_blank">BLOG</a></li>
+                  <li><a class="header__link" href="#" target="_blank">Contact</a></li>
                 </ul>
+                <button class="header__search" type="button" id="js-header__search"></button>
+                <button class="burger__menu" type="button" id="js-burger__menu"><span></span>
+<span></span>
+<span></span>
+                </button>
               </nav>
-              <button class="header__search" type="button" id="js-header__search"></button>
-              <button class="burger__menu burger__menu--active" type="button" id="js-burger__menu"></button>
             </div>
           </div>
         </header>
@@ -36,42 +39,42 @@
             </div>
           </div>
         </section>
-        <section class="item-details">
+        <section class="details">
           <div class="container">
-            <div class="item-details__nav nav-details">
+            <div class="details__nav nav-details">
               <button class="nav-details__arrow nav-details__arrow--prev" type="button" role="button" aria-label="Previous">Previous</button>
               <button class="nav-details__arrow nav-details__arrow--next" type="button" role="button" aria-label="Next">Next</button>
-              <button class="nav-details__btn js-nav-details__btn" type="button">Show All</button>
+              <button class="nav-details__btn" type="button" id="js-nav-details__btn">Show All</button>
             </div>
-            <div class="item-details__content js-slider__item-details">
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+            <div class="details__content details__item" id="js-slider__details">
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -82,44 +85,44 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -130,44 +133,44 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -178,44 +181,44 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -226,44 +229,44 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -274,44 +277,44 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
-              <div class="descr-item">
-                <div class="descr-item__content">
-                  <div class="descr-item__content-headline">
-                    <h3 class="descr-item__content-title">Pereira creative agency</h3>
+              <div class="details__item item-det">
+                <div class="item-det__content">
+                  <div class="item-det__content-headline">
+                    <h3 class="item-det__content-title">Pereira creative agency</h3>
                     <div class="inner__title">Branding design</div>
                   </div>
-                  <div class="descr-item__content-subtext">
-                    <div class="descr-item__content-box descr-item__box inner__title">
-                      <div class="descr-item__box-date">February 28,2015</div>
-                      <div class="descr-item__box-like">324 likes</div>
+                  <div class="item-det__content-subtext">
+                    <div class="item-det__content-box item-det__box inner__title">
+                      <div class="item-det__box-date">February 28,2015</div>
+                      <div class="item-det__box-like">324 likes</div>
                     </div>
-                    <p class="descr-item__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
+                    <p class="item-det__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!</p>
                   </div>
-                          <div class="descr-item__content-item block-details">
-                            <div class="block-details__title inner__title">Role on Project</div>
-                            <div class="block-details__subtext">Project Designer, Lead Designer, Markerting Head</div>
+                          <div class="item-det__content-item item-tags">
+                            <div class="item-tags__title inner__title">Role on Project</div>
+                            <div class="item-tags__subtext">Project Designer, Lead Designer, Markerting Head</div>
                           </div>
-                  <div class="descr-item__content-item block-details">
-                    <div class="block-details__title inner__title">Tags</div>
-                    <div class="block-details__subtext">
+                  <div class="item-det__content-item item-tags">
+                    <div class="item-tags__title inner__title">Tags</div>
+                    <div class="item-tags__subtext">
                       
                       <a href="#">Mobile App,</a>
                       <a href="#">UI/UX design </a>
                     </div>
                   </div>
-                  <div class="descr-item__content-item block-details descr-item__share">
-                    <button class="descr-item__share-btn" type="button"> <span>Share</span></button>
-                    <ul class="descr-item__share-list socials-list">
+                  <div class="item-det__content-item item-tags item-det__share">
+                    <button class="item-det__share-btn" type="button"> <span>Share</span></button>
+                    <ul class="item-det__share-list socials-list">
                               <li><a class="icon-facebook" href="#"></a></li>
                               <li><a class="icon-google" href="#"></a></li>
                               <li><a class="icon-twitter" href="#"></a></li>
@@ -322,13 +325,13 @@
                     </ul>
                   </div>
                 </div>
-                <div class="descr-item__images">
-                  <div class="descr-item__images-main" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                  <div class="descr-item__images-submain">
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__1.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__2.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__3.jpg)"></div>
-                            <div class="descr-item__images-item" style="background-image: url(images/item-details/item-details__4.webp)"></div>
+                <div class="item-det__images">
+                  <div class="item-det__images-main" style="background-image: url(images/details/__1.jpg)"></div>
+                  <div class="item-det__images-submain">
+                            <div class="item-det__images-item" style="background-image: url(images/details/__1.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__2.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__3.jpg)"></div>
+                            <div class="item-det__images-item" style="background-image: url(images/details/__4.webp)"></div>
                   </div>
                 </div>
               </div>
@@ -341,7 +344,7 @@
               <h2 class="headline__title">Related Works </h2>
               <p class="headline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laboriosam animi repellendus optio iure possimus? Quia ad veritatis, molestias, provident officia reprehenderit assumenda esse dolorum nam, autem sequi! Est, adipisci!</p>
             </div>
-            <div class="related-works__items"><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/related-works__1.jpg)"></a><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/related-works__2.jpg)"></a><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/related-works__3.jpg)"></a>
+            <div class="related-works__items"><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/__1.jpg)"></a><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/__2.jpg)"></a><a class="related-works__items-item" href="#" style="background-image: url(images/related-works/__3.jpg)"></a>
             </div>
           </div>
         </section>
@@ -364,6 +367,7 @@
         <div class="footer__copyright">&#169; 2016 <a> Mulitix Theme </a> by ThemeForces. All Rights Reserved.</div>
       </footer>
     </div>
+    <script src="js/main.min.js">    </script>
   </body>
   <script defer="defer" async="async" src="js/portfolio__details.min.js">   </script>
 </html>

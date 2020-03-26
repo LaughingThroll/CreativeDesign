@@ -1,0 +1,301 @@
+@media (max-width: 1320px) {
+  // start big-banner
+  .big-banner__slider {
+    &-arrow {
+      &--prev {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
+    }
+  }
+  // end big-banner 
+}  
+@media (max-width: 1240px) {
+  // start skills.html
+  .skill-our__progress {
+    width: 90%;
+  }
+  // end skills.html
+}
+
+@media (max-width: 960px) {
+  // start skills.html
+  .story-our {
+    p {
+      margin-bottom: 24px;
+      line-height: 22px;
+    }
+  }
+  .small-title {
+    margin-bottom: 1.5rem;
+  }
+  .skill-our__item + .skill-our__item {
+    margin-top: 10px;
+  }
+  .skill-our__title {
+    margin-bottom: 10px;
+  }
+  // end skills.html
+  // start team.html
+  .team__item-images {
+    height: 330px;
+  } 
+  // end team.html
+}
+
+@media (max-width: 860px) {
+
+  //  start portfolio.html
+  .portfolio-list { 
+    li {
+      padding: 0 5px;
+    }
+    &__btn {
+      padding: 0 8px;
+    }
+  }
+  
+  //  end portfolio.html   
+  // start big-banner.html
+  .main-title {
+    max-width: 550px;
+    &__title {
+      font-size: 40px;
+    }
+  }
+  // end big-banner.html
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+  // start header
+  .header {
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+    &__list {
+      display: block;
+      position: absolute;
+      top: 91px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vh - 92px);
+      background-color: #fff;
+      z-index: 50;
+      text-align: center;
+      padding-top: 100px;
+      transform: translateX(200%);
+      transition: all .5s;
+    }
+    &__link {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    &__search {
+      width: 18px;
+      height: 18px;
+      margin: 0 10px;
+      &::before {
+        font-size: 18px;
+        top: -4px;   
+      }
+    } 
+  }
+  .header__nav--active {
+    .header__list {
+      transform: translateX(0);
+    }
+  }
+  .burger__menu {
+    display: block;
+  }
+  // end header
+  // start small-banner
+  .small-banner {
+    padding: 5.8rem 0 5.6rem;
+    min-height: 310px;
+  } 
+  // end small-banner 
+
+  // start skills.html
+  .skills {
+    padding: 2rem 0 2.2rem;
+    &__images {
+      flex: 1 1 100%;
+      margin-bottom: 15px; 
+    }
+    &__content {
+      flex: 1 1 100%;
+    }
+    .story-our {
+      text-align: center; 
+    }
+
+  }
+  // end skills.html
+
+   // start team.html
+   .team {
+    padding: 2.2rem 0 3rem;
+      &__headline {
+        margin-bottom: 2.3rem;
+      }
+      &__item {
+        flex: 1 1 100%;
+        &-images {
+          margin-bottom: 1.1rem;
+        }
+        &-subtitle {
+          margin-bottom: .4rem;
+        }
+        &-text {
+          line-height: 18px;
+        }
+      }
+    }
+  // end team.html
+  // start portfolio.html
+  .portfolio {
+    padding: 0rem 0 4.6rem;
+    &-nav {
+      border: 0;
+    }
+    &-list { 
+      li {
+        display: block;
+        &::before {
+          display: none;
+        }
+      }
+      &__btn {
+        padding: 0 8px;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+  }  
+  .portfolio-gallery__items {
+    padding: 10px 0;
+    column-count: 2;
+  } 
+  // end portfolio.html 
+  // start big-banner.html
+  .big-banner {
+    padding: 10.6rem 0 1.9rem;
+    min-height: 400px;
+  }
+  .big-banner__slider {
+    &-arrow {
+      display: none;
+    }
+    .big-banner__slider-dots {
+      bottom: -70px;
+    }
+  }
+  // end big-banner.html
+  // start footer
+  .footer {
+    &__logo {
+      margin-bottom: 10px;
+    }
+    &-socials {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+    &__copyright {
+      padding: 15px 0;
+    }
+  }
+  // end footer
+}
+
+@media (max-width: 600px) {
+ // start big-banner.html
+ .big-banner {
+  padding: 6.6rem 0 1.9rem;
+}
+// end big-banner.html 
+}
+
+
+
+
+@media (max-width: 500px) {
+  
+  // start team.html GLOBAL_STYLE
+  .headline {
+    &__title {
+      margin-bottom: 1.1rem;
+      font-size: 2rem;
+    } 
+    &__text {
+      line-height: 22px;
+    }
+  }
+  // end team.html 
+
+  
+  // start footer
+  .footer {
+    &-socials__list {
+      li + li {
+        margin-left: 1.3rem;
+      }
+    }
+    &__copyright {
+      font-size: 8px;
+    }
+  }
+  // end footer
+}
+
+@media (max-width: 480px) {
+  // start big-banner.html
+ .big-banner {
+   min-height: 360px;
+ }
+ .main-title__title {
+   line-height: 46px;
+ }
+ // end big-banner.html
+
+ // start skills.html
+ .story-our {
+  p {
+    margin-bottom: 16px;
+  }
+ } 
+ .small-title {
+   margin-bottom: .5rem;
+ }
+ .skill-our__title {
+   margin-bottom: 5px;
+ }
+ // end skills.html 
+
+ // start portfolio.html
+ .portfolio-gallery__items {
+   column-count: 1;
+ }
+ // end portfolio.html
+}
+
+@media (max-width: 320px) {
+  // start big-banner.html
+ .main-title__title {
+   font-size: 36px;
+   line-height: 42px;
+ }
+ // end big-banner.html
+}
+
+@media (min-width: 701px) {
+  .header__list {
+    display: flex !important;
+  }
+
+}

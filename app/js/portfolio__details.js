@@ -1,1 +1,1 @@
-import {itemDetails} from '../module/item-details/item-details'
+import {itemDetails} from '../module/details/details'

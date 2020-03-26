@@ -1,42 +1,63 @@
-- var srcInstagram = ['images/blog/blog-instagram/__1.jpg', 'images/blog/blog-instagram/__2.jpg', 'images/blog/blog-instagram/__3.jpg', 'images/blog/blog-instagram/__4.jpg', 'images/blog/blog-instagram/__5.jpg', 'images/blog/blog-instagram/__6.jpg', 'images/blog/blog-instagram/__7.jpg', 'images/blog/blog-instagram/__8.jpg', 'images/blog/blog-instagram/__9.jpg',];
-- var blogsText = ['construction', 'engineering', 'architecture', 'structural design', 'civil engineer', 'industrial', 'management', 'mechanical'];
-- var srcItem = ['background-image: url(images/blog/blog-item/__1.jpg);', 'background-image: url(images/blog/blog-item/__2.jpg);', 'background-image: url(images/blog/blog-item/__3.jpg);', 'background-image: url(images/blog/blog-item/__4.jpg);', 'background-image: url(images/blog/blog-item/__5.jpg);'];
-- var blogPost = ['background-image: url(images/blog/blog-post/__1.jpg);', 'background-image: url(images/blog/blog-post/__2.jpg);', 'background-image: url(images/blog/blog-post/__3.jpg);'];
-//- TODO classname
+//- Variable using in aside
+- let imagesInstagram = ['images/blog/blog-instagram/__1.jpg', 'images/blog/blog-instagram/__2.jpg', 'images/blog/blog-instagram/__3.jpg', 'images/blog/blog-instagram/__4.jpg', 'images/blog/blog-instagram/__5.jpg', 'images/blog/blog-instagram/__6.jpg', 'images/blog/blog-instagram/__7.jpg', 'images/blog/blog-instagram/__8.jpg', 'images/blog/blog-instagram/__9.jpg',];
+//- =====================================
+- let blogsTags = ['construction', 'engineering', 'architecture', 'structural design', 'civil engineer', 'industrial', 'management', 'mechanical'];
+  //- blog-post__item  
+- let imagesPost = ['background-image: url(images/blog/blog-post/__1.jpg);', 'background-image: url(images/blog/blog-post/__2.jpg);', 'background-image: url(images/blog/blog-post/__3.jpg);'];
+- let titlePost = ['Tile', 'Title in a small', 'title in a small text'];
+- let datePost = ['on July 19, 2016', 'on July 19, 2016', 'on July 15, 2016'];
+//- =============================================
+//- Variable using in content for items
+- let imagesItem = ['background-image: url(images/blog/blog-item/__1.jpg);', 'background-image: url(images/blog/blog-item/__2.jpg);', 'background-image: url(images/blog/blog-item/__3.jpg);', 'background-image: url(images/blog/blog-item/__4.jpg);', 'background-image: url(images/blog/blog-item/__5.jpg);'];
+//- ==================================
+- let titleItem = [' I am a Blog Post Title with an awesoume image', 'I am a Blog Post Title with an awesoume image', 'I am a Blog Post Title with an awesoume image', 'I am a Blog Post Title with an awesoume image', 'I am a Blog Post Title with an awesoume image'];
+//- =================================================
+-let userName = ['by Jenn Pereira', 'by Jenn Pereira', 'by Jenn Pereira', 'by Jenn Pereira', 'by Jenn Pereira'];
+//- ===================================================
+- let textItem = ['fillPhase', 'oPhasellus ucibus...', 'Ajeasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit   magna, nec imperdiet lacus sem eu nisi scelerisque faucibus...', 'ggsPhasellus et ne.', 'saadaPhasellus et nus...'];
+//- ==========================
+- let dateItem = ['on July 19, 2016', 'on July 15, 2016', 'on July 16, 2016', 'on July 19, 2016', 'on July 19, 2016']  
+//- 
+
+mixin tape-item(images, title, userName, text, date)
+  .tape-item
+    .tape-item__img(style=images)
+    .tape-item__content
+      a.tape-item__title  #{ title}
+      a.tape-item__icontext.icon-user.tape-item__user(href="#")  #{ userName}
+      p.tape-item__text  #{ text}
+      .tape-item__icons
+        .tape-item__icontext.icon-calendar-o  #{ date}
+        .tape-item__icons-box
+          |
+          |
+          a.tape-item__icon.icon-share-alt(href="#")
+          |
+          |
+          button.tape-item__icon.icon-heart-o(type="button") 
+mixin blog-post__item(images, title, date) 
+  a.blog-post__item
+    .blog-post__images(style=images)
+    .blog-post__content
+      .blog-post__content-title #{title}
+      .blog-post__content-date #{date}
+
 section.blog
   .container
     .blog__inner
       .blog-wrapper__content
         .blog-content.tape  
-          - for(let i = 0; i < srcItem.length; i++)
-            .tape-item
-              .tape-item__img(style=srcItem[i])
-              .tape-item__content
-                a.tape-item__title I am a Blog Post Title with an awesoume image
-                a.tape-item__icontext.icon-user.tape-item__user(href="#") by Jenn Pereira 
-                p.tape-item__text Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit   magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris. Etiam   facilisis eu nisi scelerisque faucibus...
-                .tape-item__icons
-                  .tape-item__icontext.icon-calendar-o on July 19, 2016
-                  .tape-item__icons-box
-                    |
-                    |
-                    a.tape-item__icon.icon-share-alt(href="#")
-                    |
-                    |
-                    button.tape-item__icon.icon-heart-o(type="button") 
+          - for(let i = 0; i < imagesItem.length; i++)
+            +tape-item(imagesItem[i], titleItem[i], userName[i], textItem[i], dateItem[i]) 
           .tape-item.tape-item--video
             video(src="images/blog/blog-item/--video-1.mp4")
             .descr__video
               button(type="button") 
-          .tape-item.tape-item--video
-            video(src="images/blog/blog-item/--video-1.mp4")
-            .descr__video
-              button(type="button")     
           .tape-item.tape-item--images(style="background-image: url(images/blog/blog-images/__1.jpg);")
             .descr__content
               a.tape-item__title I am a Blog Post Title with an awesoume image
               a.tape-item__icontext.icon-user.tape-item__user(href="#") by Jenn Pereira 
-              p.tape-item__text Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit   magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris. Etiam   facilisis eu nisi scelerisque faucibus...
+              p.tape-item__text Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin sempersuscipit   magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat egetpurus mauris. Etiam   facilisis eu nisi scelerisque faucibus...
               .tape-item__icons
                 .tape-item__icontext.icon-calendar-o on July 19, 2016
                 .tape-item__icons-box
@@ -45,8 +66,11 @@ section.blog
                   a.tape-item__icon.icon-share-alt(href="#")
                   |
                   |
-                  button.tape-item__icon.icon-heart-o(type="button")      
-        button.load__btn(type="button") Load more          
+                  button.tape-item__icon.icon-heart-o(type="button")    
+
+        button.load__btn(type="button") Load more   
+
+
       aside.blog-aside
         form.blog-aside__search
           input(type="text" placeholder="Search")
@@ -54,23 +78,19 @@ section.blog
         .blog-aside__item.blog-post
           .blog-aside__title Recent Posts
           .blog-post__items.blog-aside__items
-            - for(let i = 0; i < blogPost.length; i++)
-              a.blog-post__item
-                .blog-post__images(style=blogPost[i])
-                .blog-post__content
-                  .blog-post__content-title Lorem ipsum dolor sit amet.
-                  .blog-post__content-date July 01 2016
+            - for (let i = 0; i < imagesPost.length; i++) 
+              +blog-post__item(imagesPost[i], titlePost[i], datePost[i])
         .blog-aside__item.blog-tags
           .blog-aside__title Popular Tags
           .blog-tags__items
-            - for (let i = 0; i < blogsText.length; i++) 
-              button.blog-tags__btn(type="submit") #{blogsText[i]}       
+            - for (let i = 0; i < blogsTags.length; i++) 
+              button.blog-tags__btn(type="submit") #{blogsTags[i]}       
         .blog-aside__item.blog-instagram
           .blog-aside__title Instagram
           .blog-instagram__items.blog-aside__items
-            - for(let i = 0; i < srcInstagram.length; i++) 
+            - for(let i = 0; i < imagesInstagram.length; i++) 
               a.blog-instagram__link(href="#")
-                img(src=srcInstagram[i] alt="")
+                img(src=imagesInstagram[i] alt="")
             
               
           

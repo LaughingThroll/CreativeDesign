@@ -16,7 +16,6 @@
     "browser-sync": "^2.26.7",
     "cssmin": "^0.4.3",
     "del": "^5.1.0",
-    "glider-js": "^1.7.1",
     "google-maps": "^4.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -28,6 +27,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
+    "swiper": "^5.3.6",
     "webpack-stream": "^5.2.1"
   }
 }

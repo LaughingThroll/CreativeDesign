@@ -17,6 +17,7 @@ body {
 	font-weight: 400;
 	color: $textColor;
 	height: 100%;
+	
 }
 
 // start reset CSS
@@ -45,6 +46,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	overflow-x: hidden;
 }
 .content {
 	flex: 1 0 auto;
@@ -60,12 +62,13 @@ img {
 	}
 }
 
-// Headline title in site
+// MainHeadline title in site only index.html
 .main-title {
 	text-align: center;
 	max-width: 700px;
 	margin: 0 auto;
 	text-transform: uppercase;
+	// for other pages extends from main-title  CSS
 	&--left {
 		max-width: 600px;
 		margin: 0;
@@ -93,19 +96,7 @@ img {
 		color: $black;
 	}
 }
-
-
-//
-.small-title {
-	@include resetMP;
-	font-size: 1.2rem;
-	color: $black;
-	letter-spacing: 4px;
-	font-weight: 300;
-	margin-bottom: 2.5rem;
-	text-transform: uppercase;
-}
-
+// load btn for load file) on index.html,  blog.html
 .load__btn {
 	@include resetButton;
 	width: 125px;
@@ -117,16 +108,31 @@ img {
 	font-weight: 700;
 	font-size: 13px;
 	line-height: 20px;
-	letter-spacing: .50px;
+	letter-spacing: .5px;
 }
 
+// title on about.html
+.small-title {
+	@include resetMP;
+	font-size: 1.2rem;
+	color: $black;
+	letter-spacing: 4px;
+	font-weight: 300;
+	margin-bottom: 2.5rem;
+	text-transform: uppercase;
+}
+
+
+//  title on about.html, portfolio__details.html
 .inner__title {
 	@include resetMP;
-	font-size: 16px;
+	font-size: 1.15rem;
 	letter-spacing: 0.25px;
 	font-weight: 700;
 }
 
+
+// title on about.html, portfolio__details.html, single-post.html 
 .headline {
 	text-align: center;
 	max-width: 615px;
@@ -137,7 +143,7 @@ img {
 		color: $black;
 		text-transform: uppercase;
 		font-weight: 300;
-		font-size: 30px;
+		font-size: 2.15rem;
 		letter-spacing: 4px;
 		margin-bottom: 2.1rem;
 	}
@@ -148,6 +154,7 @@ img {
 	}
 }
 
+// list with icon in footer.html, portfolio__details.html 
 .socials-list {
 	@include resetUl;
 	li {
@@ -159,7 +166,7 @@ img {
 	}
 }
 
-// single-post 
+// start this classes have  single-post.html and contact.html 
 
 .default__input {
 	height: 38px;
@@ -190,3 +197,4 @@ img {
 	color: #fff;
 	text-transform: uppercase;
 }
+// end

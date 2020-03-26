@@ -16,6 +16,7 @@ let isDev = true,
    
 const webConfig = {
   entry: {
+    main: path.resolve(__dirname, './app/js/main.js'), 
     index: path.resolve(__dirname, './app/js/index.js'), 
     portfolio__details: path.resolve(__dirname, './app/js/portfolio__details.js'), 
     blog: path.resolve(__dirname, './app/js/blog.js'), 
@@ -68,7 +69,7 @@ gulp.task('script', function(){
 gulp.task('styleLibs', function(){
     return gulp.src([
       'node_modules/normalize.css/normalize.css',
-      'node_modules/glider-js/glider.css',
+      'node_modules/swiper/css/swiper.css',
      
     ])
       .pipe(concat('libs.min.css'))

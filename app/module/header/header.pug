@@ -1,20 +1,28 @@
+//- 
+//- 
+//- 
+//- 
+//- 
 header.header
   .container
     .header__inner
       a(href="#").header__logo.logo
         img(src="images/logo.png")
       nav.header__nav
-        ul.header__list
+        ul.header__list#js-header__list
           li
             a(href="#" target="_blank").header__link.header__link--active Home 
           li
-            a(href="./about" target="_blank").header__link About                                               
+            a(href="#" target="_blank").header__link About                                               
           li
-            a(href="./portfolio" target="_blank").header__link Portfolio 
+            a(href="#" target="_blank").header__link Portfolio 
           li
-            a(href="./blog" target="_blank").header__link BLOG
+            a(href="#" target="_blank").header__link BLOG
           li
-            a(href="./contact" target="_blank").header__link Contact
-      button(type="button").header__search#js-header__search
-      button(type="button").burger__menu#js-burger__menu.burger__menu--active
+            a(href="#" target="_blank").header__link Contact
+        button(type="button").header__search#js-header__search
+        button(type="button").burger__menu#js-burger__menu
+          <span></span>
+          <span></span>
+          <span></span>
                   

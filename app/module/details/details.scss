@@ -1,4 +1,4 @@
-.item-details {
+.details {
   padding: 20px 0 10rem;
   &__nav {
     margin-bottom: 6.7rem;
@@ -7,6 +7,7 @@
 
 .nav-details {
   font-size: 13px;
+ 
   &__btn {
     @include resetButton;
     display: block;
@@ -32,6 +33,7 @@
     text-transform: uppercase;
     color: $green;
     margin: 0 40px;
+    top: 19px;
     &::before {
       font-family: 'icomoon';
       position: absolute;
@@ -51,19 +53,16 @@
         right: 0;
       }
     }
-
   }
-
 }
 
-.descr-item {
+.item-det {
   display: flex;
   justify-content: space-between;
 }
 
-.descr-item__content {
-  max-width: 550px;
-  width: 100%;
+.item-det__content {
+  flex: 0 1 calc(50% - 10px);
   &-headline {
     margin-bottom: 2.15rem;
   }
@@ -89,7 +88,7 @@
   }
 }
 
-.descr-item__box {
+.item-det__box {
   font-size: 14px;
   margin-bottom: 2.85rem; 
   &-date {
@@ -111,8 +110,8 @@
   }
 }
 
-.block-details {
-  & + .block-details {
+.item-tags {
+  & + .item-tags {
     margin-top: 3.6rem;
   }
   &__title {
@@ -124,12 +123,11 @@
     a {
       @include resetLink;
       color: $textColor;
-    }
-    
+    } 
   }
 }
 
-.descr-item__share {
+.item-det__share {
   display: flex;
   &-btn {
     @include resetButton;
@@ -196,9 +194,8 @@
   }
 }
 
-.descr-item__images {
-  max-width: 560px;
-  width: 100%;
+.item-det__images {
+  flex: 0 1 50%;
   height: 100%;
   &-main {
     background-repeat: no-repeat;
@@ -231,24 +228,24 @@
     &:hover::before {
       background-color: rgba(#000, .5);
     }
-    & + .descr-item__images-item {
+    & + .item-det__images-item {
       margin-left: 10px;
     }
   }
 }
 
 .js-slider__item-details--full {
-  .descr-item {
+  .item-det {
     flex-direction: column-reverse;
   }
-  .descr-item__images {
+  .item-det__images {
     position: relative;
     max-width: 520px;
     &-submain {
       display: none;
     }
   }
-  .descr-item__content {
+  .item-det__content {
     position: absolute;
     top: 0;
     left: 0;

@@ -1,9 +1,9 @@
-import Glider from '../../../node_modules/glider-js/glider.js';
+import Swiper from '../../../node_modules/swiper/js/swiper.js';
 
 
-const navDetBtn = document.querySelector('.js-nav-details__btn')
-const jsSliderItemDet = document.querySelector('.js-slider__item-details')
-const gliderTrack = jsSliderItemDet.getElementsByClassName('glider-track')
+const navDetBtn = document.querySelector('#js-nav-details__btn')
+const jsSliderItemDet = document.querySelector('#js-slider__details')
+// const gliderTrack = jsSliderItemDet.getElementsByClassName('glider-track')
 const descrContent = document.querySelectorAll('.descr-item__content')
 const descrImages = document.querySelectorAll('.descr-item__images')
 const descrItem = document.getElementsByClassName('descr-item')
@@ -12,14 +12,14 @@ const newScreenSlider = 'js-slider__item-details--full';
 
 
 
-let gliderDetails = new Glider(jsSliderItemDet, {
-  slidesToScroll: 1,
-  slidesToShow: 1,
-  arrows: {
-    prev: '.nav-details__arrow--prev',
-    next: '.nav-details__arrow--next'
-  }
-});
+// let gliderDetails = new Glider(jsSliderItemDet, {
+//   slidesToScroll: 1,
+//   slidesToShow: 1,
+//   arrows: {
+//     prev: '.nav-details__arrow--prev',
+//     next: '.nav-details__arrow--next'
+//   }
+// });
 
 const addClass = (name) => {
   jsSliderItemDet.classList.add(name)
@@ -71,7 +71,7 @@ navDetBtn.addEventListener('click', function () {
   (!jsSliderItemDet.classList.contains(newScreenSlider)) ? handlerAdd() : handlerRemove()
 })
 
-export { gliderDetails };
+// export { gliderDetails };
 
 
 
