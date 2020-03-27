@@ -170,7 +170,8 @@ img {
 
 .default__input {
 	height: 38px;
-	width: 250px;
+	max-width: 250px;
+	width: 100%;
 	border: 1px solid #e1e1e1;
 	padding: 0 10px;
 	border-radius: 2px;

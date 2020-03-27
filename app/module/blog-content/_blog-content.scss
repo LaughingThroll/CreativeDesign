@@ -12,7 +12,7 @@
     width: 100%;
     column-count: 2;
     margin-left: -15px;
-    margin-bottom: 65px;
+    margin-bottom: 4.65rem;
   }
 }
 
@@ -22,7 +22,7 @@
   break-inside: avoid;
   max-width: 360px;
   width: 100%;
-  margin: 0 15px 35px 15px;
+  margin: 0 15px 2.5rem 15px;
   height: 100%;
   text-align: left;
   &__img {
@@ -30,7 +30,7 @@
     background-position: center center;
     background-size: cover;
     min-height: 245px;
-    margin-bottom: 25px;
+    margin-bottom: 1.8rem;
   }
   &__content {
     padding: 0 40px;
@@ -42,7 +42,7 @@
     color: #333;
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 1.1rem;
   } 
   &__icontext {
     font-weight: 300;
@@ -63,7 +63,7 @@
     color: $textColor;
   }
   &__text {
-    margin: 30px 0 40px;
+    margin: 2.15rem 0 2.85rem;
     font-weight: 500;
   }
   &__icons {
@@ -80,7 +80,7 @@
   }
   .icon-share-alt {
     @include resetLink;
-    margin-right: 25px;
+    margin-right: 1.8rem;
   }
   .icon-heart-o {
     @include resetButton;
@@ -206,14 +206,18 @@
     line-height: 40px;
     text-transform: uppercase;
     background-color: #ebebeb;
-    margin-bottom: 35px;
+    margin-bottom: 2.5rem;
   }
   &__item {
-    margin-top: 50px;
+    margin-top: 3.6rem;
   }
 }
 
 .blog-post {
+  &__items {
+    flex-direction: column;
+    padding: 0 25px;
+  }
   &__item {
     @include resetLink;
     display: flex;
@@ -244,6 +248,7 @@
 }
 .blog-tags {
   &__items {
+    flex-wrap: wrap;
     margin-top: -10px;
   }
   &__btn {
@@ -266,6 +271,7 @@
 .blog-instagram {
   &__items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-left: -5px; 
   }
@@ -274,8 +280,7 @@
     display: block;
     max-width: 100px;
     height: 80px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin: 0 0 5px 5px;
     img {
       width: 100%;
       height: 100%;
@@ -284,6 +289,3 @@
   }
 }
 
-.blog-aside__items {
-	padding: 0 25px;
-}

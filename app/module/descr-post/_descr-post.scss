@@ -18,7 +18,7 @@
         content: '\f08a';
         font-family: 'icomoon';
         position: absolute;
-        top: 3px;
+        top: 5px;
         left: 0;
       }
     }
@@ -44,7 +44,7 @@
   }
   &-title {
     @include resetMP;
-    margin-bottom: 25px;
+    margin-bottom: 1.8rem;
     text-transform: uppercase;
     color: $black;
     font-weight: 700;
@@ -57,7 +57,7 @@
   padding: 20px 30px 25px 35px;
   border: 1px solid #e1e1e1;
   border-left-width: 4px;
-  margin: 25px 0 35px;
+  margin: 1.8rem 0 2.5rem;
   &-text {
     font-size: 18px;
     line-height: 30px;

@@ -14,6 +14,9 @@
 .our-value__item {
   max-width: 360px;
   width: 100%;
+  & + .our-value__item {
+    margin-left: 2.15rem;
+  }
   &-images {
     background-repeat: no-repeat;
     background-position: center center;

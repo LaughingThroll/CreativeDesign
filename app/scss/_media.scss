@@ -19,7 +19,20 @@
   }
   // end skills.html
 }
-
+@media (max-width: 1089px) {
+  // start contact.html
+  .info-form__input {
+    margin-bottom: .15rem;
+    input {
+      max-width: 380px;
+      margin-bottom: 10px;
+      & + input {
+        margin-left: 0px;
+      }
+    } 
+  }
+  // end contact.html
+}
 @media (max-width: 960px) {
   // start skills.html
   .story-our {
@@ -43,10 +56,48 @@
     height: 330px;
   } 
   // end team.html
+  // start blog.html
+  .blog-content {
+    column-count: 1;
+  }
+  .tape-item {
+    max-width: 100%;
+    &__img {
+      margin-bottom: .8rem;
+    }
+    &__title {
+      margin-bottom: .5rem;
+    }
+    &__text {
+      margin: .9rem 0 0.85rem;
+    } 
+  }
+  .blog-tags__btn {
+    padding: 0 10px;
+  }
+  .blog-instagram__link {
+    margin: 0 0 5px 3px; 
+  }
+  // end blog.html
 }
 
 @media (max-width: 860px) {
-
+  // start single-post.html
+  .leave-comment {
+    padding-bottom: 2.7rem;
+  }
+  .form-comment__input {
+    margin-bottom: 0.4rem;
+    input {
+      max-width: 100%;
+      margin-bottom: 10px; 
+      & + input {
+        margin-left: 0;
+        
+      }
+    }
+  }
+  // end single-post.html
   //  start portfolio.html
   .portfolio-list { 
     li {
@@ -114,6 +165,36 @@
     display: block;
   }
   // end header
+  // start blog.html
+  .blog {
+    padding: 2rem 0 3.4rem;
+    &__content {
+      margin-bottom: 2.65rem;
+    }
+    &__inner {
+      display: block;
+    }  
+  }
+  .blog-aside {
+    max-width: 100%;
+    margin-left: 0;
+    &__item {
+      margin-top: 1.6rem;    
+    }
+    &__search {
+      margin-bottom: 2.65rem;
+    }
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .blog-post__items  {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  // end blog.html
   // start small-banner
   .small-banner {
     padding: 5.8rem 0 5.6rem;
@@ -197,6 +278,120 @@
     }
   }
   // end big-banner.html
+  // start our-value.html
+  .our-value {
+    padding-bottom: 1.8rem;
+    &__headline {
+      margin-bottom: 2.3rem;
+    }
+    &__items {
+      display: block;
+    }
+  }
+  .our-value__item {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    & + .our-value__item {
+      margin-left: 0;
+    } 
+    &-images {
+      margin-bottom: 10px;
+    }
+    &-title {
+      margin-bottom: 1.1rem;
+    }
+  }
+  // end our-value.html
+  // start contact.html
+  .contact {
+    padding: 2.7rem 0 2.3rem;
+  }
+  .contact-info {
+    padding-bottom: 1.7rem;
+    &__inner {
+      display: block;
+    }
+  }
+  .info-contact {
+    margin-right: 0;
+    margin-bottom: 10px;
+    &__headline {
+      margin-bottom: .85rem;
+    }
+    &__work {
+      margin-bottom: 1.15rem;
+    }
+  }
+  .info-form {
+    &__input {
+      input {
+        max-width: 100%;
+      }
+    }
+    &__textarea {
+      margin-bottom: 15px;
+    }
+  }
+  // end contact.html
+  // start single-post.html
+  // GLOBAL_STYLE
+  .inner__title {
+    font-size: 1rem;
+  }
+  .descr-post {
+    padding: 2.6rem 0 2.7rem;
+  }
+  .descr-post__headline-like {
+    padding-left: 15px;
+    &::before {
+      top: 6px;
+    }
+  }
+  .descr-post__content{
+    &-images {
+      margin-bottom: 1.6rem;
+      min-height: 300px;
+    }
+    &-box {
+      padding: 0 15px;
+    }
+    &-text{
+      & + .descr-post__content-text {
+        margin-top: 10px;
+      }
+    } 
+    &-title {
+      margin-bottom: .8rem;
+    }
+  }
+  .descr-post__blockquote {
+    padding: 10px;
+    margin: 0.8rem 0 0.5rem;
+  }
+  // end single-post.html
+  // start 404.html
+  .error__404 {
+    font-size: 180px;
+    line-height: 180px;
+    &-zero {
+      width: 150px;
+      height: 150px;
+      margin: 0 15px;
+    }
+  }
+  .error__subtext {
+    font-size: 18px;
+    margin-bottom: 15px;
+    span {
+      &::before {
+        height: 2px;
+      }
+    }
+  }
+  .error__link {
+    font-size: 14px;
+  }
+  // end 404.html
   // start footer
   .footer {
     &__logo {
@@ -217,8 +412,15 @@
  // start big-banner.html
  .big-banner {
   padding: 6.6rem 0 1.9rem;
-}
-// end big-banner.html 
+  }
+// end big-banner.html
+  // start blog.html 
+  .blog-instagram__link {
+    max-width: 80px;
+    height: 60px;
+  }
+// end blog.html
+
 }
 
 
@@ -237,6 +439,8 @@
     }
   }
   // end team.html 
+ 
+
 
   
   // start footer
@@ -276,14 +480,36 @@
    margin-bottom: 5px;
  }
  // end skills.html 
-
+//  start single-post.html
+  .descr-post__headline-date {
+    margin: 0 20px;
+  }
+//  end single-post.html
  // start portfolio.html
  .portfolio-gallery__items {
    column-count: 1;
  }
  // end portfolio.html
 }
+@media (max-width: 430px) {
+    // start blog.html 
+    .blog-instagram__link {
+      max-width: 100px;
+      height: 80px;
+    }
+  // end blog.html
+  // start error.html
+  .error__404 {
+    font-size: 130px;
+    line-height: 130px;
+    &-zero {
+      width: 105px;
+      height: 105px;
+    }
 
+  }
+  // end error.html
+}
 @media (max-width: 320px) {
   // start big-banner.html
  .main-title__title {

@@ -4,7 +4,7 @@
 - let blogsTags = ['construction', 'engineering', 'architecture', 'structural design', 'civil engineer', 'industrial', 'management', 'mechanical'];
   //- blog-post__item  
 - let imagesPost = ['background-image: url(images/blog/blog-post/__1.jpg);', 'background-image: url(images/blog/blog-post/__2.jpg);', 'background-image: url(images/blog/blog-post/__3.jpg);'];
-- let titlePost = ['Tile', 'Title in a small', 'title in a small text'];
+- let titlePost = ['Tildas asddda ddsads daadds dasd dad asdasd asdd ad dad a ddadfdase', 'Title indsadas asdd asd sadad asdasd ad adasd adadasd add ad  a small', 'title isaaff i jfi jf if aasajhdajldajdja ladajdlajdl jlawjdl dasa dajdla dalwn a small text'];
 - let datePost = ['on July 19, 2016', 'on July 19, 2016', 'on July 15, 2016'];
 //- =============================================
 //- Variable using in content for items
@@ -72,22 +72,22 @@ section.blog
 
 
       aside.blog-aside
-        form.blog-aside__search
+        form.blog-aside__search#js-blog-aside__search
           input(type="text" placeholder="Search")
           button.blog-aside__btn(type="button")
         .blog-aside__item.blog-post
           .blog-aside__title Recent Posts
-          .blog-post__items.blog-aside__items
+          .blog-post__items.js-blog-post
             - for (let i = 0; i < imagesPost.length; i++) 
               +blog-post__item(imagesPost[i], titlePost[i], datePost[i])
         .blog-aside__item.blog-tags
           .blog-aside__title Popular Tags
-          .blog-tags__items
+          .blog-tags__items.js-blog-post
             - for (let i = 0; i < blogsTags.length; i++) 
               button.blog-tags__btn(type="submit") #{blogsTags[i]}       
         .blog-aside__item.blog-instagram
           .blog-aside__title Instagram
-          .blog-instagram__items.blog-aside__items
+          .blog-instagram__items.js-blog-post
             - for(let i = 0; i < imagesInstagram.length; i++) 
               a.blog-instagram__link(href="#")
                 img(src=imagesInstagram[i] alt="")
