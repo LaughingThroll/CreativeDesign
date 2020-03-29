@@ -1,5 +1,7 @@
 import {toggleHandler} from '../module/header/header'
 
+
+// DANGER HEADER
 const burgerBtn = document.querySelector('#js-burger__menu')
 const headerList = document.querySelector('#js-header__list')
 const headerLink = document.querySelectorAll('.header__link')
@@ -12,4 +14,8 @@ headerList.addEventListener('click', function(e) {
   }
 })
 // show and hide headerMenu
-burgerBtn.addEventListener('click', toggleHandler) 
+burgerBtn.addEventListener('click', toggleHandler)
+// DANGER HEADER 
+
+
+

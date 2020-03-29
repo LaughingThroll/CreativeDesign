@@ -8,10 +8,9 @@
 .related-works__items {
   display: flex;
   justify-content: space-between;
-  margin-left: -35px;
   &-item {
     display: block;
-    flex: 0 1 31%;
+    flex: 0 1 calc(33% - 10px);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

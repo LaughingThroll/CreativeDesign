@@ -59,6 +59,7 @@
 .item-det {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; 
 }
 
 .item-det__content {
@@ -117,7 +118,7 @@
   &__title {
     text-transform: uppercase;
     color: #333;
-    margin-bottom: 20px;  
+    margin-bottom: 1.4rem;  
   }
   &__subtext {
     a {
@@ -129,6 +130,7 @@
 
 .item-det__share {
   display: flex;
+  align-items: center;
   &-btn {
     @include resetButton;
     background-color: #707070;
@@ -179,7 +181,7 @@
           border-color: transparent #e1e1e1 transparent transparent;
         }
       }
-      &:first-child {
+      &:last-child {
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
       }
@@ -233,22 +235,78 @@
     }
   }
 }
-
+// full slider
 .js-slider__item-details--full {
-  .item-det {
-    flex-direction: column-reverse;
+  .new-item-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    
   }
+  .item-det {
+    flex-direction: column;
+    flex: 0 1 calc(33.3333333% - 30px);
+    margin: 0 0 30px 30px;
+  }
+ 
   .item-det__images {
     position: relative;
-    max-width: 520px;
+    cursor: pointer;
+    margin-bottom: 0;
+    &-main {
+      margin-bottom: 0;
+    }
     &-submain {
       display: none;
     }
+    &:hover {
+      .item-det__content {
+        opacity: 1;
+      }
+    }
   }
   .item-det__content {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: all .5s ease-out;
+    color: $white;
+
+    &-item {
+      display: none;
+    }
+    &-headline {
+      margin: 1.5rem 0 1.15rem 0;
+    }
+    &-title {
+      color: $white;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    &-subtext {
+      padding: 0 0 .3rem;
+      border: 0;
+      margin-bottom: .85rem;
+    }
   }
+  // Something strange
+  .item-det__content > div{
+    padding: 0 1.4rem;
+  }
+  .item-det__box {
+    margin-bottom: .85rem;
+    &-like {
+      margin-left: 40px;
+    }
+  }
+  // TODO share icon in JS
 }
 
