@@ -75,4 +75,7 @@
       @include resetButton;
     }
   }
+  .portfolio-gallery__item--active {
+    display: inline-block;
+  }
 }

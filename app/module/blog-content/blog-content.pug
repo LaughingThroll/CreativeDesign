@@ -36,7 +36,7 @@ mixin tape-item(images, title, userName, text, date)
           |
           button.tape-item__icon.icon-heart-o(type="button") 
 mixin blog-post__item(images, title, date) 
-  a.blog-post__item
+  a.blog-post__item(href="#")
     .blog-post__images(style=images)
     .blog-post__content
       .blog-post__content-title #{title}
@@ -79,6 +79,7 @@ section.blog
           .blog-aside__title Recent Posts
           .blog-post__items.js-blog-post
             - for (let i = 0; i < imagesPost.length; i++) 
+              //- TODO path on server 
               +blog-post__item(imagesPost[i], titlePost[i], datePost[i])
         .blog-aside__item.blog-tags
           .blog-aside__title Popular Tags

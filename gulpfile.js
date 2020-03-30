@@ -18,6 +18,7 @@ const webConfig = {
   entry: {
     main: path.resolve(__dirname, './app/js/main.js'), 
     index: path.resolve(__dirname, './app/js/index.js'), 
+    portfolio: path.resolve(__dirname, './app/js/portfolio.js'), 
     portfolio__details: path.resolve(__dirname, './app/js/portfolio__details.js'), 
     blog: path.resolve(__dirname, './app/js/blog.js'), 
     contact: path.resolve(__dirname, './app/js/contact.js') 

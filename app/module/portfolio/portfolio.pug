@@ -2,31 +2,39 @@
 section.portfolio
   .portfolio-nav
     .container
-      ul.portfolio-list
+      ul.portfolio-list#js-portfolio-list
         li
-          button(class="portfolio-list__btn portfolio-list__btn--active" type="button") All
+          button(class="portfolio-list__btn portfolio-list__btn--active" type="button" data-href="all") All
         li
-          button(class="portfolio-list__btn" type="button") logo
+          button(class="portfolio-list__btn" type="button" data-href="logo") logo
         li
-          button(class="portfolio-list__btn" type="button") Mobile App
+          button(class="portfolio-list__btn" type="button" data-href="mobileApp") Mobile App
         li
-          button(class="portfolio-list__btn"  type="button") Wordpress
+          button(class="portfolio-list__btn" type="button" data-href="wordpress") Wordpress
         li
-          button(class="portfolio-list__btn"  type="button") Web design
+          button(class="portfolio-list__btn" type="button" data-href="webDesign") Web design
         li
-          button(class="portfolio-list__btn" type="button") Ui/UX
+          button(class="portfolio-list__btn" type="button" data-href="ui/ux") Ui/UX
         li
-          button(class="portfolio-list__btn" type="button") Branding 
+          button(class="portfolio-list__btn" type="button" data-href="branding") Branding 
   .portfolio-gallery
     .container
       .portfolio-gallery__items
         - for(let i = 0; i < images.length; i++)
-          .portfolio-gallery__item
+          //- TODO path and imagesPath and data-item i will get width server   
+          a.portfolio-gallery__item(href="#" data-item="wordpress" )
              picture
                img(src=images[i] alt="images")
              .portfolio-gallery__item-description
                button(type="button")
-                 img(src="images/icon/plus-icon.svg", alt="")                                                              
+                 img(src="images/icon/plus-icon.svg", alt="") 
+        - for(let i = 0; i < images.length; i++)
+          a.portfolio-gallery__item(href="#" data-item="logo")
+             picture
+               img(src=images[i] alt="images")
+             .portfolio-gallery__item-description
+               button(type="button")
+                 img(src="images/icon/plus-icon.svg", alt="")                                                                       
       button(type="button").load__btn Load more       
 
 
