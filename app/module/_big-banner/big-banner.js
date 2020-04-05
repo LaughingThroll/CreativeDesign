@@ -1,4 +1,4 @@
-import Swiper from '../../../node_modules/swiper/js/swiper.js';
+import Swiper from 'swiper';
 
 let bigBannerSlider = document.querySelector('#js-big-banner__slider');
   let opt = {

@@ -1,4 +1,4 @@
-import Swiper from '../../../node_modules/swiper/js/swiper.js';
+import Swiper from 'swiper';
 
 
 const navDetBtn = document.querySelector('#js-nav-details__btn')
@@ -6,7 +6,10 @@ const navDetBtn = document.querySelector('#js-nav-details__btn')
 // jsSliderDetailsElements
 const $jsSliderDetails = document.querySelector('#js-slider__details')
 const jsSliderDetailsTrack = $jsSliderDetails.querySelector('#js-slider__details-track')
+// itemDet 
 const itemDet = document.getElementsByClassName('item-det')
+let itemDetArray = [...itemDet]
+
 const itemDetContent = document.querySelectorAll('.item-det__content')
 const itemDetContentText = document.querySelectorAll('.item-det__content-text')
 const itemDetImages = document.querySelectorAll('.item-det__images')
@@ -22,7 +25,7 @@ const newItemElements = document.getElementsByClassName('new-item-det')
 // wrapper 
 const newWrapperElements = document.getElementsByClassName('new-item-wrapper')
 let newWrapperEle
-let itemDetArray = [...itemDet]
+
 
 // sliderDetails
   let opt = {
@@ -85,7 +88,7 @@ const handlerAdd = () => {
   let currentIndex
   // Big circle by wrapperElements
   newItemElementsArray.forEach((item, index) => {
-    // Small circle by itemDetArray
+    // Small circle by itemDetArray TODO create revrse this func
     for(let i = currentIndex || 0; i < itemDetArray.length; i++) {
       // remember current index 
       currentIndex = i 
@@ -129,14 +132,42 @@ const handlerRemove = () => {
 navDetBtn.addEventListener('click', function () {
   (!$jsSliderDetails.classList.contains(newScreenSlider)) ? handlerAdd() : handlerRemove()
 })
-// TODO Working but bad e target show fucking other item
+// TODO optimization fragment code  
 jsSliderDetailsTrack.addEventListener('click', function (e) {
   console.log(e.target)
   if ((e.target.classList.contains('item-det__content')) 
-  && ($jsSliderDetails.classList.contains(newScreenSlider))) {
+  && ($jsSliderDetails.classList.contains(newScreenSlider))
+  || (e.target.classList.contains('item-det__content-text'))
+  || (e.target.classList.contains('item-det__box-date'))
+  || (e.target.classList.contains('item-det__content-title'))
+  || (e.target.classList.contains('item-det__content-subtitle'))) {
       handlerRemove()
     }
   })
+
+// Get dataset in localStroge and take current item
+let storageValue = localStorage.getItem('id')
+
+if (storageValue !== 'underfind') {
+  itemDetArray.forEach(item => {
+    if (storageValue === item.dataset.id) {
+      jsSliderDetails.slideTo(item.dataset.id, 800)
+      localStorage.clear()
+    }
+  })
+  // Scroll to item
+  setTimeout(() => {
+    window.scrollTo({
+      top: 450, 
+      behavior: 'smooth'
+    })
+  }, 100)
+  
+  
+}
+
+
+
 
 export { jsSliderDetails };
 

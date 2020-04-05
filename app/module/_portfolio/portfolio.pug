@@ -20,21 +20,23 @@ section.portfolio
   .portfolio-gallery
     .container
       .portfolio-gallery__items
-        - for(let i = 0; i < images.length; i++)
+        - for(let i = 0; i < 1; i++)
           //- TODO path and imagesPath and data-item i will get width server   
-          a.portfolio-gallery__item(href="#" data-item="wordpress" )
+          a.portfolio-gallery__item(href="./portfolio__details.html" data-id="0" target="__blank" data-item="wordpress" )
              picture
                img(src=images[i] alt="images")
-             .portfolio-gallery__item-description
-               button(type="button")
-                 img(src="images/icon/plus-icon.svg", alt="") 
-        - for(let i = 0; i < images.length; i++)
-          a.portfolio-gallery__item(href="#" data-item="logo")
-             picture
-               img(src=images[i] alt="images")
-             .portfolio-gallery__item-description
-               button(type="button")
-                 img(src="images/icon/plus-icon.svg", alt="")                                                                       
+            
+        - for(let i = 0; i < 1; i++)         
+          a.portfolio-gallery__item(href="./portfolio__details.html" data-id="2" target="__blank" data-item="wordpress" )
+            picture
+              img(src=images[i] alt="images")
+        //- - for(let i = 0; i < images.length; i++)
+        //-   a.portfolio-gallery__item(href="#" data-item="logo")
+        //-      picture
+        //-        img(src=images[i] alt="images")
+        //-      .portfolio-gallery__item-description
+        //-        button(type="button")
+        //-          img(src="images/icon/plus-icon.svg", alt="")                                                                       
       button(type="button").load__btn Load more       
 
 

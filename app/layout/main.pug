@@ -12,12 +12,9 @@ html(lang="en")
   body
     .wrapper
       .content
-        include ../module/header/header.pug
+        include ../module/_header/header.pug
         block content
-          
-
-
-      include ../module/footer/footer.pug  
+        
+      include ../module/_footer/footer.pug  
     script(src="js/main.min.js")     
-  block script 
-    
+  block script  

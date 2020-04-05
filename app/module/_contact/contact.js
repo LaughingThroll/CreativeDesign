@@ -1,7 +1,7 @@
 // import index from '../../../node_modules/google-maps/lib/index';
 // import "core-js/stable";
-import "../../../node_modules/@babel/polyfill/node_modules/regenerator-runtime/runtime";
-import { Loader } from '../../../node_modules/google-maps/lib/loader';
+import "@babel/polyfill/node_modules/regenerator-runtime";
+import { Loader } from 'google-maps/lib/loader';
 
 
 const loader = new Loader('AIzaSyB7Zf9SQSeZDiujRs1hwaT5G7YNWDvkL4o');

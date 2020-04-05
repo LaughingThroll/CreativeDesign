@@ -11,10 +11,12 @@ const defaultInput = document.querySelectorAll('.default__input')
 // add active class in header link on all pages
 window.addEventListener('DOMContentLoaded', function () {
   headerLink.forEach(link => {
-    link.classList.remove('header__link--active')
+    // debugger
     // location currentURLpath
     if (link.getAttribute('href') === `\.${location.pathname}`) {
+      link.classList.remove('header__link--active')
       link.classList.add('header__link--active')
+      console.log(location.pathname)
     }
   })
 })

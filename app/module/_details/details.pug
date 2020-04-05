@@ -1,7 +1,7 @@
 include ../../layout/mixin/__icon-list.pug
 
 - var imagesSrc = ["background-image: url(images/details/__1.jpg)", "background-image: url(images/details/__2.jpg)", "background-image: url(images/details/__3.jpg)", "background-image: url(images/details/__4.webp)"]
-- var title = ['Pereira creative agency', 'Pereira creative agency2', 'Pereira creative agency3', 'Pereira creative agency4', 'Pereira creative agency5', 'Pereira creative agency6',]
+- var title = ['I am wordpress', 'Pereira creative agency2', 'Pereira creative agency3', 'Pereira creative agency4', 'Pereira creative agency5', 'Pereira creative agency6',]
 - var subtitle = ['Branding design', 'Branding design2', 'Branding design3', 'Branding design4', 'Branding design5', 'Branding design6',]
 - var text = ['ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!', 'ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum providentinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!', 'ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum provident   consectetur cum vitae quaera uibusdam nihil facilis est amet exercitationem commodi!', 'ipm nihil facilis est amet exercitationem commodi!', 'ipsumipsum provident   consectetur cum vitae quaerat consequatur distinctio inventore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!', 'ipsentore deleniti laboriosam cumque, similique magni  quibusdam nihil facilis est amet exercitationem commodi!']
 mixin block-details(title, text)
@@ -20,8 +20,39 @@ section.details
       button(type="button").nav-details__btn#js-nav-details__btn Show All
     .details__content#js-slider__details.details__item
       #js-slider__details-track.swiper-wrapper
-        - for(let i = 0; i < title.length; i++) 
-          .details__item.item-det.swiper-slide
+        - for(let i = 0; i < 1; i++) 
+          .details__item.item-det.swiper-slide(data-id="0")
+            .item-det__content
+              .item-det__content-headline
+                h3.item-det__content-title #{title[i]}
+                .item-det__content-subtitle.inner__title #{subtitle[i]}
+              .item-det__content-subtext
+                .item-det__content-box.item-det__box.inner__title
+                  .item-det__box-date February 28,2015
+                  .item-det__box-like 324 likes
+                p.item-det__content-text #{text[i]}
+              +block-details('Role on Project', 'Project Designer, Lead Designer, Markerting Head')
+              .item-det__content-item.item-tags
+                .item-tags__title.inner__title Tags
+                .item-tags__subtext
+                  |
+                  |
+                  a(href="#") Mobile App,
+                  |
+                  |
+                  a(href="#") UI/UX design 
+              .item-det__content-item.item-tags.item-det__share
+                button(type="button").item-det__share-btn 
+                  span Share
+                ul.item-det__share-list.socials-list
+                  +icon-list
+            .item-det__images
+              .item-det__images-main(style="background-image: url(images/details/__1.jpg)")
+              .item-det__images-submain
+                - for(let i = 0; i < imagesSrc.length; i++) 
+                  +images-item(imagesSrc[i])
+        - for(let i = 0; i < 1; i++)           
+          .details__item.item-det.swiper-slide(data-id="1")
             .item-det__content
               .item-det__content-headline
                 h3.item-det__content-title #{title[i]}
@@ -51,5 +82,36 @@ section.details
               .item-det__images-submain
                 - for(let i = 0; i < imagesSrc.length; i++) 
                   +images-item(imagesSrc[i])
+        - for(let i = 0; i < 1; i++)           
+          .details__item.item-det.swiper-slide(data-id="2")
+            .item-det__content
+              .item-det__content-headline
+                h3.item-det__content-title #{title[i]}
+                .inner__title #{subtitle[i]}
+              .item-det__content-subtext
+                .item-det__content-box.item-det__box.inner__title
+                  .item-det__box-date February 28,2015
+                  .item-det__box-like 324 likes
+                p.item-det__content-text #{text[i]}
+              +block-details('Role on Project', 'Project Designer, Lead Designer, Markerting Head')
+              .item-det__content-item.item-tags
+                .item-tags__title.inner__title Tags
+                .item-tags__subtext
+                  |
+                  |
+                  a(href="#") Mobile App,
+                  |
+                  |
+                  a(href="#") UI/UX design 
+              .item-det__content-item.item-tags.item-det__share
+                button(type="button").item-det__share-btn 
+                  span Share
+                ul.item-det__share-list.socials-list
+                  +icon-list
+            .item-det__images
+              .item-det__images-main(style="background-image: url(images/details/__1.jpg)")
+              .item-det__images-submain
+                - for(let i = 0; i < imagesSrc.length; i++) 
+                  +images-item(imagesSrc[i])          
     
         
