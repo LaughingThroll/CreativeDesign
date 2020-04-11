@@ -199,3 +199,68 @@ img {
 	text-transform: uppercase;
 }
 // end
+// start Dark Theme
+.dark-theme {
+	background-color: #0e0e0e;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+	button {
+		color: #fff;
+		&::before {
+			color: #fff;
+		}
+	}
+	header {
+		.header__link {
+			&::before {
+				display: none;
+			}
+		
+			&--active {
+				color: #000;
+				span:first-child {
+					position: relative;
+					z-index: 5;
+				}
+				#js-header__decorate-lamp {
+					// TODO shadow inset and design Lamp
+					position: absolute;
+					top: -42px;
+					left: 0;
+					height: 0;
+					width: 0;
+					border-bottom: 100px solid  #fff;
+					border-right: 0 solid transparent;
+					border-left: 0 solid transparent;
+					box-shadow: inset 5px 5px 10px #000;
+				} 
+			}
+
+		}
+	}
+	.big-banner__slider .big-banner__slider-dots {
+		.swiper-pagination-bullet {
+			background-color: #000;
+			&-active {
+				border-color: #fff;
+			}
+		} 
+	}
+	.load__btn {
+		background-color: #000;
+	}
+	.footer__copyright a {
+		color: $textColor;
+	}
+	.small-title {
+		color: $white;
+	}
+	.inner__title {
+		color: #e3e3e3;
+	}
+	
+}	
+
+// end Dark Theme 

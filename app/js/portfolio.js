@@ -1,1 +1,1 @@
-import '../module/portfolio/portfolio';
+import '../module/_portfolio/portfolio';

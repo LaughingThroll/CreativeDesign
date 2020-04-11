@@ -1,18 +1,24 @@
-// let isDev = true,
-//     isProd = !isDev;  
+
 module.exports = () => {
+  console.log(G.path.resolve(__dirname))
+  const PATH = {
+    js: G.path.resolve(__dirname, './../../app/js'),
+    app: G.path.resolve(__dirname, './../../app')
+  }
   const webConfig = {
     entry: {
-      main: G.path.resolve(__dirname, './app/js/main.js'),
-      index: G.path.resolve(__dirname, './app/js/index.js'),
-      portfolio: G.path.resolve(__dirname, './app/js/portfolio.js'),
-      portfolio__details: G.path.resolve(__dirname, './app/js/portfolio__details.js'),
-      blog: G.path.resolve(__dirname, './app/js/blog.js'),
-      contact: G.path.resolve(__dirname, './app/js/contact.js')
+      main: `${PATH.js}/main.js`,
+      index: `${PATH.js}/index.js`,
+      portfolio: `${PATH.js}/portfolio.js`,
+      portfolio__details: `${PATH.js}/portfolio__details.js`,
+      blog: `${PATH.js}/blog.js`,
+      contact: `${PATH.js}/contact.js`,
+      about: `${PATH.js}/about.js`
     },
     output: {
       filename: '[name].min.js'
     },
+    devtool: 'eval-cheap-module-source-map',
     module: {
       rules: [
         {
@@ -22,14 +28,6 @@ module.exports = () => {
         }
       ]
     },
-    // TODO set settigs and connect in files
-    optimization: {
-      splitChunks: {
-        // include all types of chunks
-        chunks: 'all'
-      }
-    },
-    // devtool: isDev ? 'eval-source-map' : 'none',
   };
 
   G.gulp.task('webpackJs', function () {

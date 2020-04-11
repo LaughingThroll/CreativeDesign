@@ -1,4 +1,4 @@
-import {insert, asideToggle} from '../module/blog-content/blog-content';
+import {insert, asideToggle} from '../module/_blog-content/blog-content';
 
 let formSearch = document.querySelector('#js-blog-aside__search')
 let jsBlogPost = document.querySelectorAll('.js-blog-post')

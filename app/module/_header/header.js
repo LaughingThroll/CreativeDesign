@@ -3,4 +3,8 @@ function toggleHandler() {
   this.classList.toggle('burger__menu--active')
 }
 
+function recalculateWidthLampHeader(lamp) {
+  console.log(lamp)
+}
+
 export { toggleHandler }

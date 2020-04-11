@@ -1,4 +1,4 @@
-import {initMap} from '../module/contact/contact'
+import {initMap} from '../module/_contact/contact'
 
 initMap()
 

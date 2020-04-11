@@ -1,5 +1,5 @@
 // TODO optimization GULP and WEBPACK split file on different files 
-
+// TODO HTML and CSS validation
 global.G = {
   gulp: require('gulp'),
   sass: require('gulp-sass'),

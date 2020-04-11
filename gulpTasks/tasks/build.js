@@ -8,7 +8,7 @@ module.exports = () => {
       .pipe(G.gulp.dest('dist'))
     let buildCss = G.gulp.src('app/css/**/*.css')
       .pipe(G.gulp.dest('dist/css'))
-    let buildJs = G.gulp.src('app/js/main.min.js')
+    let buildJs = G.gulp.src('app/js/*.min.js')
       .pipe(G.gulp.dest('dist/js'))
     let buildFonts = G.gulp.src('app/fonts/**/*.*')
       .pipe(G.gulp.dest('dist/fonts'))
