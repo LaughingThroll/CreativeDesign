@@ -19,18 +19,53 @@ window.addEventListener('DOMContentLoaded', function () {
       link.classList.add('header__link--active')
 
       // DarkTHeme append LightActive in header 
-      let linkWidth = link.clientWidth
-      const headerDecoreteLamp = document.createElement('span')
-      headerDecoreteLamp.setAttribute('id', 'js-header__decorate-lamp')
-      link.children[0].insertAdjacentElement('afterend', headerDecoreteLamp)
-      headerDecoreteLamp.style.borderLeftWidth = headerDecoreteLamp.style.borderRightWidth = link.clientWidth/1.3 + 'px'
-      const jsHeaderDecorateLamp = document.getElementById('js-header__decorate-lamp')
-      let jsHeaderDecorateLampWidth = jsHeaderDecorateLamp.offsetWidth
-      headerDecoreteLamp.style.transform = `translateX(-${(jsHeaderDecorateLampWidth - link.clientWidth)/2}px)`
+      // let linkWidth = link.clientWidth
+      const headerDecorate = `
+      <div class="header__decorate" id="js-header__decorate">
+        <span class="header__decorate-lamp"></span> 
+        <span class="header__decorate-shadow header__decorate-shadow--left"></span> 
+        <span class="header__decorate-shadow header__decorate-shadow--right"></span> 
+        <span class="header__decorate-shadow header__decorate-shadow--down"></span> 
+      </div>`
+      link.insertAdjacentHTML('afterend', headerDecorate)
+
+      const jsHeaderDecorate = document.getElementById('js-header__decorate')
+      const headerDecorateLamp = document.getElementsByClassName('header__decorate-lamp')
+
+      headerDecorateLamp[0].style.borderLeftWidth = headerDecorateLamp[0].style.borderRightWidth = link.clientWidth/1.3 + 'px'
+      let jsHeaderDecorateWidth = jsHeaderDecorate.offsetWidth
+      headerDecorateLamp[0].style.transform = `translateX(-${(jsHeaderDecorateWidth - link.clientWidth)/2}px)`
+      // SHADOW 
+      const headerDecoreteShadowLeft = document.getElementsByClassName('header__decorate-shadow--left')
+      const headerDecoreteShadowRight = document.getElementsByClassName('header__decorate-shadow--right')
+      const headerDecoreteShadowDown = document.getElementsByClassName('header__decorate-shadow--down')
+      // Magical Mathemathical calculate
+      const regNumber = /\d+/g
+      // console.log(headerDecorateLamp)
+      const HEIGHT_TRIANGLE_LIGHT = 100
+      let catetA = +headerDecorateLamp[0].style.borderLeftWidth.match(regNumber)[0]
+      let catetB = HEIGHT_TRIANGLE_LIGHT
+      let hipotenuse = calculateHipotenuse(catetA, catetB)
+      console.log(hipotenuse)
+      console.log(sin0(catetB, hipotenuse))
+      // const rotateLeft = /2
+      // headerDecoreteShadowLeft[0].style.transform = `rotate(${rotateLeft.toFixed(1)}deg)`
+      
+      // const  = 
+      // console.log(test)
+      // console.log(headerDecorateLamp[0].style.borderLeftWidth)
+      // jsHeaderDecorateWidth/4
     }
   })
 })
+function calculateHipotenuse(a, b) {
+  const hipotenuseSquare = (a ** 2) + (b ** 2)
+  return Math.sqrt(hipotenuseSquare)
+}
 
+function sin0(a, b) {
+  return a/b
+}
 
 
 // show and hide headerMenu

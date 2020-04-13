@@ -12,12 +12,11 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	line-height: 24px;
 	font-weight: 400;
 	color: $textColor;
 	height: 100%;
-	
 }
 
 // start reset CSS
@@ -108,7 +107,7 @@ img {
 	font-weight: 700;
 	font-size: 13px;
 	line-height: 20px;
-	letter-spacing: .5px;
+	letter-spacing: 0.5px;
 }
 
 // title on about.html
@@ -122,7 +121,6 @@ img {
 	text-transform: uppercase;
 }
 
-
 //  title on about.html, portfolio__details.html
 .inner__title {
 	@include resetMP;
@@ -131,8 +129,7 @@ img {
 	font-weight: 700;
 }
 
-
-// title on about.html, portfolio__details.html, single-post.html 
+// title on about.html, portfolio__details.html, single-post.html
 .headline {
 	text-align: center;
 	max-width: 615px;
@@ -154,7 +151,7 @@ img {
 	}
 }
 
-// list with icon in footer.html, portfolio__details.html 
+// list with icon in footer.html, portfolio__details.html
 .socials-list {
 	@include resetUl;
 	li {
@@ -162,11 +159,11 @@ img {
 	}
 	a {
 		@include resetLink;
-    color: $textColor;
+		color: $textColor;
 	}
 }
 
-// start this classes have  single-post.html and contact.html 
+// start this classes have  single-post.html and contact.html
 
 .default__input {
 	height: 38px;
@@ -213,31 +210,55 @@ img {
 		}
 	}
 	header {
+		li {
+			position: relative;
+			.header__decorate {
+				// TODO shadow inset and design Lamp
+				// position: relative;
+				position: absolute;
+				top: -42px;
+				left: 0;
+				z-index: 0;
+				height: 0;
+				// width: 0;
+				&-lamp {
+					display: inline-block;
+					height: 0;
+					width: 0;
+					border-bottom: 100px solid #fff;
+					border-right: 0 solid transparent;
+					border-left: 0 solid transparent;
+				}
+				.header__decorate-shadow {
+					position: absolute;
+					top: 0;
+					height: 100px;
+					display: inline-block;
+					width: 1px;
+					background-color: #fff;
+					&--left {
+						box-shadow: 5px 0 10px #000;
+						left: 0px;
+					}
+					&--right {
+						box-shadow: -5px 0 10px #000;
+						right: 36%;	
+					}
+				}
+		}
+
 		.header__link {
 			&::before {
 				display: none;
 			}
-		
 			&--active {
 				color: #000;
 				span:first-child {
 					position: relative;
 					z-index: 5;
 				}
-				#js-header__decorate-lamp {
-					// TODO shadow inset and design Lamp
-					position: absolute;
-					top: -42px;
-					left: 0;
-					height: 0;
-					width: 0;
-					border-bottom: 100px solid  #fff;
-					border-right: 0 solid transparent;
-					border-left: 0 solid transparent;
-					box-shadow: inset 5px 5px 10px #000;
-				} 
+				}
 			}
-
 		}
 	}
 	.big-banner__slider .big-banner__slider-dots {
@@ -246,7 +267,7 @@ img {
 			&-active {
 				border-color: #fff;
 			}
-		} 
+		}
 	}
 	.load__btn {
 		background-color: #000;
@@ -260,7 +281,6 @@ img {
 	.inner__title {
 		color: #e3e3e3;
 	}
-	
-}	
+}
 
-// end Dark Theme 
+// end Dark Theme

@@ -1,6 +1,6 @@
 // import index from '../../../node_modules/google-maps/lib/index';
 // import "core-js/stable";
-import "@babel/polyfill/node_modules/regenerator-runtime";
+import "@babel/runtime/regenerator";
 import { Loader } from 'google-maps/lib/loader';
 
 
