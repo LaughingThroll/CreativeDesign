@@ -8,7 +8,7 @@
   &-list {
     @include resetUl;
     padding: 15px 0;
-    li {
+    &__plank {
       display: inline-block;
       padding: 0 15px;
       position: relative;
@@ -88,5 +88,36 @@
   // }
   .portfolio-gallery__item--active {
     display: inline-block;
+  }
+}
+
+.dark-theme {
+  .portfolio-list {
+    padding: 10px 0;
+    &__plank {
+      background-color: #fff;
+      height: 100%;
+      transform: skew(-50deg);
+      padding: 10px;
+      transition: all .2s ease-in; 
+      &::before {
+        display: none;
+      }
+      & + li {
+        margin-left: 10px;
+      }
+      &--active {
+        box-shadow: 6px 3px 3px #fff;
+        &:active {
+          box-shadow: 6px 3px 2px #fff;
+        }
+      }
+
+    }
+    &__btn {
+      z-index: 5;
+      transform: skew(50deg);
+      color:#000;
+    }
   }
 }

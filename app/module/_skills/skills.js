@@ -3,10 +3,17 @@ function helperFuncNotOnehundred() {
 	const skillOurProgressLineArray = [...skillOurProgressLine]
 	// TODO max-width: 99%
 	skillOurProgressLineArray.forEach((item, i) => {
-		if(item.style.width > '100%') {
-			skillOurProgressLineArray[i].style.width = '99%'
+		// REPEAT CODE DANGER
+		const regNumber = /\d+/g
+		const skillOurProgressLineWidth =  +item.style.width.match(regNumber)
+		console.log(skillOurProgressLineWidth)
+		if (skillOurProgressLineWidth > 100) {
+			
+		} else {
+			skillOurProgressLineWidth = '99%'
 		}
 	})
-}    
 
-export {helperFuncNotOnehundred}
+}
+
+export { helperFuncNotOnehundred }

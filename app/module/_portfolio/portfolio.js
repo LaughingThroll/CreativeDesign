@@ -2,6 +2,7 @@ const portfolioList = document.querySelector('#js-portfolio-list')
 const portfolioBtn = document.querySelectorAll('.portfolio-list__btn')
 const portfolioGalleryItems = document.querySelector('.portfolio-gallery__items')
 const portfolioGalleryItem = document.getElementsByClassName('portfolio-gallery__item')
+const wrapper = document.querySelector('.wrapper')
 let portfolioGalleryItemArray = [...portfolioGalleryItem]
 
 
@@ -11,7 +12,12 @@ portfolioList.addEventListener('click', function () {
   if (event.target.classList.contains('portfolio-list__btn')) {
     // navigation remove all active
     portfolioBtn.forEach(btn => {
+      console.log(btn.parentElement)
       btn.classList.remove('portfolio-list__btn--active')
+      if (wrapper.classList.contains('dark-theme')) {
+        btn.parentElement.classList.remove('portfolio-list__plank--active')
+      }
+
     })
     // portfolioItems 
     // portfolioItems remove all active
@@ -32,15 +38,20 @@ portfolioList.addEventListener('click', function () {
         item.style.display = 'inline-block'
       })
     }
+    // navigation add active
+    event.target.classList.add('portfolio-list__btn--active')
+    if (wrapper.classList.contains('dark-theme')) {
+      event.target.parentElement.classList.add('portfolio-list__plank--active')
+    }
 
   }
-  // navigation add active
-  event.target.classList.add('portfolio-list__btn--active')
+
+
 })
 
 // Set dataset in localStorage
-portfolioGalleryItems.addEventListener('click', function() {
-  if(event.target.classList.contains('portfolio-gallery__item')) {    
+portfolioGalleryItems.addEventListener('click', function () {
+  if (event.target.classList.contains('portfolio-gallery__item')) {
     localStorage.clear()
     localStorage.setItem('id', event.target.parentElement.dataset.id)
   }

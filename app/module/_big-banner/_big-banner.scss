@@ -51,3 +51,14 @@
     }
   }
 } 
+
+.dark-theme {
+  .big-banner__slider .big-banner__slider-dots {
+		.swiper-pagination-bullet {
+			background-color: #000;
+			&-active {
+				border-color: #fff;
+			}
+		}
+	}
+}

@@ -196,6 +196,7 @@ img {
 	text-transform: uppercase;
 }
 // end
+
 // start Dark Theme
 .dark-theme {
 	background-color: #0e0e0e;
@@ -209,77 +210,18 @@ img {
 			color: #fff;
 		}
 	}
-	header {
-		li {
-			position: relative;
-			.header__decorate {
-				// TODO shadow inset and design Lamp
-				// position: relative;
-				position: absolute;
-				top: -42px;
-				left: 0;
-				z-index: 0;
-				height: 0;
-				// width: 0;
-				&-lamp {
-					display: inline-block;
-					height: 0;
-					width: 0;
-					border-bottom: 100px solid #fff;
-					border-right: 0 solid transparent;
-					border-left: 0 solid transparent;
-				}
-				.header__decorate-shadow {
-					position: absolute;
-					top: 0;
-					height: 100px;
-					display: inline-block;
-					width: 1px;
-					background-color: #fff;
-					&--left {
-						box-shadow: 5px 0 10px #000;
-						left: 0px;
-					}
-					&--right {
-						box-shadow: -5px 0 10px #000;
-						right: 36%;	
-					}
-				}
-		}
-
-		.header__link {
-			&::before {
-				display: none;
-			}
-			&--active {
-				color: #000;
-				span:first-child {
-					position: relative;
-					z-index: 5;
-				}
-				}
-			}
-		}
-	}
-	.big-banner__slider .big-banner__slider-dots {
-		.swiper-pagination-bullet {
-			background-color: #000;
-			&-active {
-				border-color: #fff;
-			}
-		}
-	}
 	.load__btn {
 		background-color: #000;
-	}
-	.footer__copyright a {
-		color: $textColor;
 	}
 	.small-title {
 		color: $white;
 	}
 	.inner__title {
 		color: #e3e3e3;
+	}
+	.main-title__title {
+		color: #000;
+		background-color: #fff;
 	}
 }
 
