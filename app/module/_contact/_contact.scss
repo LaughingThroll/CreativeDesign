@@ -97,3 +97,12 @@
   width: 100%;
   min-height: 360px;
 }
+
+.dark-theme {
+  .info-contact__headline {
+    color: #fff;
+    &::before {
+      background-color: #fff;
+    }
+  }
+}

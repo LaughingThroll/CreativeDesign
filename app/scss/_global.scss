@@ -160,7 +160,11 @@ img {
 	a {
 		@include resetLink;
 		color: $textColor;
+		&::before {
+			transition: all .3s ease-in;
+		}
 	}
+	
 }
 
 // start this classes have  single-post.html and contact.html
@@ -173,6 +177,7 @@ img {
 	padding: 0 10px;
 	border-radius: 2px;
 	outline: none;
+	transition: all .5s;
 	&::placeholder {
 		font-style: italic;
 	}
@@ -222,6 +227,28 @@ img {
 	.main-title__title {
 		color: #000;
 		background-color: #fff;
+	}
+	.headline__title {
+		color: #fff;
+	}
+	.default__input {
+		color: #fff;
+		background-color: #000;
+		border: 0;
+		border-left: 4px solid transparent;
+		&--active {
+			border-left-color: #fff;
+		}
+	}
+	.our-value__item-title {
+		color: #fff;
+	}
+	.socials-list {
+		li:hover {
+			a::before {
+				text-shadow: 0 0 3px #fff;
+			}
+		}
 	}
 }
 

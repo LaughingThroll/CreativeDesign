@@ -10,8 +10,8 @@
       }
     }
   }
-  // end big-banner 
-}  
+  // end big-banner
+}
 @media (max-width: 1240px) {
   // start skills.html
   .skill-our__progress {
@@ -22,14 +22,14 @@
 @media (max-width: 1089px) {
   // start contact.html
   .info-form__input {
-    margin-bottom: .15rem;
+    margin-bottom: 0.15rem;
     input {
       max-width: 380px;
       margin-bottom: 10px;
       & + input {
         margin-left: 0px;
       }
-    } 
+    }
   }
   // end contact.html
   // start portfolio__details.html
@@ -40,7 +40,7 @@
       margin-bottom: 10px;
     }
     &-headline {
-      margin-bottom: .15rem;
+      margin-bottom: 0.15rem;
     }
     &-subtext {
       margin-bottom: 0;
@@ -49,9 +49,9 @@
     }
   }
   .item-det__box {
-    margin-bottom: .85rem;
+    margin-bottom: 0.85rem;
   }
-  .item-tags+.item-tags {
+  .item-tags + .item-tags {
     margin-top: 1.6rem;
   }
   .item-det__images {
@@ -91,7 +91,7 @@
   // start team.html
   .team__item-images {
     height: 330px;
-  } 
+  }
   // end team.html
   // start blog.html
   .blog-content {
@@ -100,20 +100,20 @@
   .tape-item {
     max-width: 100%;
     &__img {
-      margin-bottom: .8rem;
+      margin-bottom: 0.8rem;
     }
     &__title {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
     &__text {
-      margin: .9rem 0 0.85rem;
-    } 
+      margin: 0.9rem 0 0.85rem;
+    }
   }
   .blog-tags__btn {
     padding: 0 10px;
   }
   .blog-instagram__link {
-    margin: 0 0 5px 3px; 
+    margin: 0 0 5px 3px;
   }
   // end blog.html
   // start portfolio__details.html
@@ -125,7 +125,7 @@
       flex-basis: calc(50% - 30px);
     }
   }
-  
+
   // end portfolio__details.html
 }
 
@@ -138,16 +138,15 @@
     margin-bottom: 0.4rem;
     input {
       max-width: 100%;
-      margin-bottom: 10px; 
+      margin-bottom: 10px;
       & + input {
         margin-left: 0;
-        
       }
     }
   }
   // end single-post.html
   //  start portfolio.html
-  .portfolio-list { 
+  .portfolio-list {
     li {
       padding: 0 5px;
     }
@@ -155,13 +154,13 @@
       padding: 0 8px;
     }
   }
-  
-  //  end portfolio.html   
+
+  //  end portfolio.html
   // start portfolio__details.html
   .item-det__images-item {
     height: 140px;
-  } 
-  // end portfolio__details.html 
+  }
+  // end portfolio__details.html
   // start big-banner.html
   .main-title {
     max-width: 550px;
@@ -181,7 +180,7 @@
   // start header
   .header {
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, .25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     &__list {
       display: block;
       position: absolute;
@@ -196,7 +195,7 @@
       text-align: center;
       padding-top: 100px;
       transform: translateX(200%);
-      transition: all .5s;
+      transition: all 0.5s;
     }
     &__link {
       font-size: 24px;
@@ -208,9 +207,9 @@
       margin: 0 10px;
       &::before {
         font-size: 18px;
-        top: -4px;   
+        top: -4px;
       }
-    } 
+    }
   }
   .header__nav--active {
     .header__list {
@@ -229,71 +228,74 @@
     }
     &__inner {
       display: block;
-    }  
+    }
   }
   .blog-aside {
     max-width: 100%;
     margin-left: 0;
     &__item {
-      margin-top: 1.6rem;    
+      margin-top: 1.6rem;
     }
     &__search {
-      margin-bottom: 2.65rem;
+      margin: 2rem 0;
     }
     &__title {
       margin-bottom: 1.5rem;
     }
   }
-  .blog-post__items  {
+  .blog-post__items {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
   }
-  
+  .blog-instagram__link {
+    max-width: 170px;
+    height: 110px;
+  }
+
   // end blog.html
   // start small-banner
   .small-banner {
     padding: 5.8rem 0 5.6rem;
     min-height: 310px;
-  } 
-  // end small-banner 
+  }
+  // end small-banner
 
   // start skills.html
   .skills {
     padding: 2rem 0 2.2rem;
     &__images {
       flex: 1 1 100%;
-      margin-bottom: 15px; 
+      margin-bottom: 15px;
     }
     &__content {
       flex: 1 1 100%;
     }
     .story-our {
-      text-align: center; 
+      text-align: center;
     }
-
   }
   // end skills.html
 
-   // start team.html
-   .team {
+  // start team.html
+  .team {
     padding: 2.2rem 0 3rem;
-      &__headline {
-        margin-bottom: 2.3rem;
+    &__headline {
+      margin-bottom: 2.3rem;
+    }
+    &__item {
+      flex: 1 1 100%;
+      &-images {
+        margin-bottom: 1.1rem;
       }
-      &__item {
-        flex: 1 1 100%;
-        &-images {
-          margin-bottom: 1.1rem;
-        }
-        &-subtitle {
-          margin-bottom: .4rem;
-        }
-        &-text {
-          line-height: 18px;
-        }
+      &-subtitle {
+        margin-bottom: 0.4rem;
+      }
+      &-text {
+        line-height: 18px;
       }
     }
+  }
   // end team.html
   // start portfolio.html
   .portfolio {
@@ -301,7 +303,7 @@
     &-nav {
       border: 0;
     }
-    &-list { 
+    &-list {
       li {
         display: block;
         &::before {
@@ -314,22 +316,22 @@
         margin-bottom: 5px;
       }
     }
-  }  
+  }
   .portfolio-gallery__items {
     padding: 10px 0;
     column-count: 2;
-  } 
-  // end portfolio.html 
+  }
+  // end portfolio.html
   // start portfolio__details.html
   .details {
-    padding: 0 0 1rem;
+    padding: 0 0 3rem;
   }
   .details__nav {
     margin-bottom: 1.7rem;
   }
   .item-tags__title {
-    margin-bottom: .4rem;
-  } 
+    margin-bottom: 0.4rem;
+  }
   .js-slider__item-details--full {
     .item-det {
       flex: 1 1 100%;
@@ -375,7 +377,7 @@
     margin-bottom: 2rem;
     & + .our-value__item {
       margin-left: 0;
-    } 
+    }
     &-images {
       margin-bottom: 10px;
     }
@@ -398,7 +400,7 @@
     margin-right: 0;
     margin-bottom: 10px;
     &__headline {
-      margin-bottom: .85rem;
+      margin-bottom: 0.85rem;
     }
     &__work {
       margin-bottom: 1.15rem;
@@ -429,7 +431,7 @@
       top: 6px;
     }
   }
-  .descr-post__content{
+  .descr-post__content {
     &-images {
       margin-bottom: 1.6rem;
       min-height: 300px;
@@ -437,13 +439,13 @@
     &-box {
       padding: 0 15px;
     }
-    &-text{
+    &-text {
       & + .descr-post__content-text {
         margin-top: 10px;
       }
-    } 
+    }
     &-title {
-      margin-bottom: .8rem;
+      margin-bottom: 0.8rem;
     }
   }
   .descr-post__blockquote {
@@ -491,51 +493,38 @@
 }
 
 @media (max-width: 600px) {
- // start big-banner.html
- .big-banner {
-  padding: 6.6rem 0 1.9rem;
+  // start big-banner.html
+  .big-banner {
+    padding: 6.6rem 0 1.9rem;
   }
-// end big-banner.html
-  // start blog.html 
-  .blog-instagram__link {
-    max-width: 80px;
-    height: 60px;
+  // end big-banner.html
+
+  // start portfolio__details.html
+  .item-det__images-main {
+    min-height: 200px;
   }
-// end blog.html
-// start portfolio__details.html
-.item-det__images-main {
-  min-height: 200px;
+  .item-det__images-item {
+    height: 100px;
+  }
+  .related-works__items-item {
+    min-height: 140px;
+  }
+  // end portfolio__details.html
 }
-.item-det__images-item {
-  height: 100px;
-}
-.related-works__items-item {
-  min-height: 140px;
-}
-// end portfolio__details.html
-
-}
-
-
-
 
 @media (max-width: 500px) {
-  
   // start team.html GLOBAL_STYLE
   .headline {
     &__title {
       margin-bottom: 1.1rem;
       font-size: 2rem;
-    } 
+    }
     &__text {
       line-height: 22px;
     }
   }
-  // end team.html 
- 
+  // end team.html
 
-
-  
   // start footer
   .footer {
     &-socials__list {
@@ -552,63 +541,62 @@
 
 @media (max-width: 480px) {
   // start big-banner.html
- .big-banner {
-   min-height: 360px;
- }
- .main-title__title {
-   line-height: 46px;
- }
- // end big-banner.html
-
- // start skills.html
- .story-our {
-  p {
-    margin-bottom: 16px;
+  .big-banner {
+    min-height: 360px;
   }
- } 
- .small-title {
-   margin-bottom: .5rem;
- }
- .skill-our__title {
-   margin-bottom: 5px;
- }
- // end skills.html 
-//  start single-post.html
+  .main-title__title {
+    line-height: 46px;
+  }
+  // end big-banner.html
+
+  // start skills.html
+  .story-our {
+    p {
+      margin-bottom: 16px;
+    }
+  }
+  .small-title {
+    margin-bottom: 0.5rem;
+  }
+  .skill-our__title {
+    margin-bottom: 5px;
+  }
+  // end skills.html
+  //  start single-post.html
   .descr-post__headline-date {
     margin: 0 20px;
   }
-//  end single-post.html
- // start portfolio.html
- .portfolio-gallery__items {
-   column-count: 1;
- }
- // end portfolio.html
-// start portfolio__details.html
-.nav-details__arrow {
-  margin: 0 5px;
-  &--prev {
-    padding-left: 10px;
+  //  end single-post.html
+  // start portfolio.html
+  .portfolio-gallery__items {
+    column-count: 1;
   }
-  &--next {
-    padding-right: 10px;
+  // end portfolio.html
+  // start portfolio__details.html
+  .nav-details__arrow {
+    margin: 0 5px;
+    &--prev {
+      padding-left: 10px;
+    }
+    &--next {
+      padding-right: 10px;
+    }
   }
-} 
-.nav-details__btn {
-  padding: 0 0 0 18px;
-  margin: 0 20px 0 auto;
-}
-.related-works__items-item {
-  min-height: 90px;
-}
-// end portfolio__details.html 
-
+  .nav-details__btn {
+    padding: 0 0 0 18px;
+    margin: 0 20px 0 auto;
+  }
+  .related-works__items-item {
+    min-height: 90px;
+  }
+  // end portfolio__details.html
 }
 @media (max-width: 430px) {
-    // start blog.html 
-    .blog-instagram__link {
-      max-width: 100px;
-      height: 80px;
-    }
+  // start blog.html
+  .blog-instagram__link {
+    max-width: 100px;
+    height: 80px;
+  }
   // end blog.html
   // start error.html
   .error__404 {
@@ -618,7 +606,6 @@
       width: 105px;
       height: 105px;
     }
-
   }
   // end error.html
   // start portfolio__details.html
@@ -626,7 +613,7 @@
     font-size: 22px;
   }
   .item-det__share {
-    &-list { 
+    &-list {
       display: flex;
       li {
         height: 26px;
@@ -645,21 +632,75 @@
         }
       }
     }
-    
   }
   // end portfolio__details.html
 }
+
+@media (max-width: 340px) {
+  // start blog.html
+  .blog-instagram__link {
+    max-width: 95px;
+  }
+  // end blog.html
+}
+
 @media (max-width: 320px) {
   // start big-banner.html
- .main-title__title {
-   font-size: 36px;
-   line-height: 42px;
- }
- // end big-banner.html
+  .main-title__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  // end big-banner.html
 }
 
 @media (min-width: 701px) {
   .header__list {
     display: flex !important;
+  }
+}
+
+.dark-theme {
+  @media (max-width: 850px) {
+    .portfolio-list {
+      &__plank {
+        display: block;
+        transform: skew(0deg);
+        & + .portfolio-list__plank {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+        &--active {
+          box-shadow: 3px 2px 3px #fff;
+        }
+      }
+      &__btn {
+        transform: skew(0deg);
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .header {
+      &__decorate {
+        display: none;
+      }
+      &__list {
+        background-color: #0e0e0e;
+      }
+      li {
+        // max-width: 200px;
+        // width: 100%;
+        // margin: 0 auto;
+        // transform: skew(-60deg);
+        // padding: 10px 0;
+        // .header__link {
+        //   transform: skew(60deg);
+        // }
+      }
+    }
+    .burger__menu {
+      span {
+        background-color: #fff;
+      }
+    }
   }
 }

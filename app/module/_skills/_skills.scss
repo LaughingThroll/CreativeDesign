@@ -79,3 +79,26 @@
     }
   }
 }
+
+.dark-theme {
+  .skill-our__progress {
+    background-color: #5757570b;
+    &-line {
+     background-color: #fff;
+     box-shadow:  0 0 2px #fff; 
+    }
+    &-circle {
+      border-color: #fff;
+      background-color: #fff;
+      box-shadow:  0 0 2px #fff; 
+
+    }
+    &-percent {
+      background-color: #fff;
+      color: #000;
+      &::before {
+        border-color: #fff transparent transparent;
+      } 
+    }
+  }
+}

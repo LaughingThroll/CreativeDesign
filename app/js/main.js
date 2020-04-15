@@ -3,12 +3,17 @@ import { toggleHandler, headerMenu } from '../module/_header/header'
 
 // DANGER HEADER
 const burgerBtn = document.querySelector('#js-burger__menu')
-
+const body = document.querySelector('body')
+// const wrapper = document.querySelector('.wrapper')
+// const headerLace = window.getComputedStyle(document.querySelector('.header__lace'),':before')
+// console.log(headerLace)
 // active Form
 const formComment = document.querySelector('#js-form')
 const defaultInput = document.querySelectorAll('.default__input')
 
-
+// headerLace.addEventListener('click', function() {
+//   wrapper.classList.toogle('dark-theme')
+// })
 // add active class in header link on all pages
 // add lamp and shadow
 window.addEventListener('DOMContentLoaded', function () {
@@ -16,7 +21,10 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 // show and hide headerMenu
-burgerBtn.addEventListener('click', toggleHandler)
+burgerBtn.addEventListener('click', function () {
+  toggleHandler(this);
+  (this.classList.contains('burger__menu--active')) ? body.style.overflow = 'hidden' : body.style.overflow = 'visible'
+})
 // DANGER HEADER
 
 // FORM ACTIVE

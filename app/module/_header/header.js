@@ -1,6 +1,7 @@
-function toggleHandler() {
-  this.parentElement.classList.toggle('header__nav--active')
-  this.classList.toggle('burger__menu--active')
+function toggleHandler(btn) {
+  btn.parentElement.classList.toggle('header__nav--active')
+  btn.classList.toggle('burger__menu--active')
+
 }
 
 

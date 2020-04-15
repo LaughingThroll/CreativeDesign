@@ -43,14 +43,14 @@
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 1.1rem;
-  } 
+  }
   &__icontext {
     font-weight: 300;
-    font-family: 'Roboto', sans-serif !important;
-    padding-left: 20px; 
+    font-family: "Roboto", sans-serif !important;
+    padding-left: 20px;
     position: relative;
     &::before {
-      font-family: 'icomoon';
+      font-family: "icomoon";
       line-height: 24px;
       position: absolute;
       left: 0;
@@ -91,11 +91,11 @@
 // video item
 .tape-item--video {
   padding: 0;
-  position: relative; 
+  position: relative;
   video {
     display: block;
     outline: none;
-    width: 100%;  
+    width: 100%;
   }
   .descr__video {
     position: absolute;
@@ -112,9 +112,9 @@
       width: 60px;
       position: relative;
       border-radius: 50%;
-      background-color: rgba(#000, .5);
+      background-color: rgba(#000, 0.5);
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         transform: translate(-25%, -50%);
         width: 0;
@@ -122,9 +122,8 @@
         border-style: solid;
         border-width: 14px 0 14px 18px;
         border-color: transparent transparent transparent #fff;
-      
       }
-    } 
+    }
   }
 }
 
@@ -138,8 +137,8 @@
   .descr__content {
     opacity: 0;
     padding: 90px 30px 35px 40px;
-    background-color: rgba(#000, .85);
-    transition: all .5s ease;
+    background-color: rgba(#000, 0.85);
+    transition: all 0.5s ease;
   }
   .tape-item__title {
     color: #fff;
@@ -154,7 +153,6 @@
   }
 }
 // end modificate .tape-item
-
 
 .blog-aside {
   max-width: 360px;
@@ -180,23 +178,43 @@
       }
     }
   }
-  &__btn {
-    @include resetButton;
-    height: 34px;
+    
+  
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 34px;
+    height: 34px;
     background-color: #999;
-    position: relative;
-    border-radius: 2px;
-    &::before {
-      content: '\f002';
-      font-family: 'icomoon';
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(50%, 45%);
-      color: #fff;
+    &-btn {
+      @include resetButton;
+      position: relative;
+      top: -3px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      transform: rotate(-40deg);
+      transition: all 0.5s ease-out;
+      z-index: 5;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        width: 2px;
+        height: 9px;
+        background-color: #fff;
+      }
+      &--active {
+        background-color: #fff;
+        box-shadow: 0 0 5px #fff;
+        transform: rotate(0deg);
+      }
     }
   }
+  
   &__title {
     text-align: center;
     font-weight: 300;
@@ -228,6 +246,7 @@
   &__images {
     width: 90px;
     min-height: 65px;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -258,7 +277,7 @@
     border-radius: 2px;
     padding: 0 18px;
     background-color: #fff;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     margin-top: 10px;
     & + .blog-tags__btn {
       margin-left: 5px;
@@ -274,7 +293,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: -5px; 
+    margin-left: -5px;
   }
   &__link {
     @include resetLink;
@@ -290,3 +309,46 @@
   }
 }
 
+.dark-theme {
+  // TODO after letter shadow must disappear
+  .blog-aside__search {
+    input {
+      background-color: #000000;
+      color: #fff;
+      // text-shadow: 0 0 2px #fff;
+    }
+  } 
+  .blog-aside__block {
+    background-color: #000;
+    &-btn {
+      box-shadow: 0 0 2px #fff;
+      &::before {
+        box-shadow: 0 0 2px #fff; 
+      }
+      &--active {
+        box-shadow: 0 0 5px #fff;
+      }
+    }
+  }
+  .blog-post__items {
+    padding: 0;
+  }
+  .blog-post__item {
+    background-color: #000;
+    padding: 15px 25px;
+  }
+   
+  .blog-post__content-title {
+    color: #fff;
+  }
+  .blog-tags__btn {
+    background-color: #000;
+  }
+  .tape-item {
+    background-color: #000;
+    padding-bottom: 15px;
+    &--video, &--images {
+      padding-bottom: 0;
+    }
+  }
+}

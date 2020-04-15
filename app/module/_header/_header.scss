@@ -10,6 +10,7 @@
     background-color: #000;
     box-shadow: -5px 5px 8px rgba(#000, 0.8);
     border-radius: 5px;
+    z-index: 51;
     &::before,
     &::after {
       content: "";

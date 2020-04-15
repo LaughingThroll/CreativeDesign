@@ -310,3 +310,20 @@
   // TODO share icon in JS
 }
 
+.dark-theme {
+  .item-det__content-title {
+    color: #fff;
+  }
+  .item-det__share-btn {
+    background-color: #000;
+   
+  }
+  .item-det__share-list {
+    li {
+      background-color: #000;
+      &:first-child::before {
+        border-color: transparent #000 transparent transparent;
+      }
+    }
+  }
+}
