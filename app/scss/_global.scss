@@ -53,6 +53,14 @@ img {
 .footer {
 	flex: 0 0 auto;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 10em #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
 //  end reset CSS
 // Logotype common
 .logo {
@@ -206,6 +214,19 @@ img {
 .dark-theme {
 	background-color: #0e0e0e;
 	color: #fff;
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+  	-webkit-box-shadow: 0 0 0px 10em #000 inset !important;
+  	-webkit-text-fill-color: #fff !important;
+	}
+	// input::-webkit-input-placeholder,
+	// textarea::-webkit-input-placeholder {
+  //   color: #fff;
+  //   text-shadow: #fff;
+  //   -webkit-text-fill-color: #fff;
+	// }
 	a {
 		color: #fff;
 	}
@@ -250,6 +271,29 @@ img {
 			}
 		}
 	}
+	.input-wrapper {
+		position: relative;
+		input {
+			color: transparent;
+		}
+		&__letters {
+			position: absolute;
+			top: 5px;
+			left: 25px;
+		}
+		&__letter {
+			animation: shadowLight 2s ease-in; 
+		}
+	}
 }
 
+
+@keyframes shadowLight {
+	0% {
+		text-shadow: 0 0 2px #fff;
+	}
+	100% {
+		text-shadow: 0 0 0px #fff;
+	}
+}
 // end Dark Theme
