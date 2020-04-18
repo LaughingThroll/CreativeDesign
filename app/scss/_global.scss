@@ -61,6 +61,13 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 10em #fff inset !important;
   -webkit-text-fill-color: #000 !important;
 }
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
 //  end reset CSS
 // Logotype common
 .logo {
@@ -280,9 +287,16 @@ input:-webkit-autofill:active {
 			position: absolute;
 			top: 5px;
 			left: 25px;
+			span {
+				display: inline-block;
+			}
 		}
 		&__letter {
 			animation: shadowLight 2s ease-in; 
+		}
+		&__space {
+			width: 3.97px;
+			height: 1px;
 		}
 	}
 }
