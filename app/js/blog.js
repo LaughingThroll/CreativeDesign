@@ -5,8 +5,8 @@ const formSearch = document.getElementsByClassName('blog-aside__search')
 const jsBlogPost = document.querySelectorAll('.js-blog-post')
 const blogAside = document.querySelector('.blog-aside')
 const blogInner = document.querySelector('.blog__inner')
-// const search = document.getElementById('search')
-// const blogAsideBlockBtn = document.querySelector('.blog-aside__block-btn')
+const search = document.getElementById('search')
+const blogAsideBlockBtn = document.querySelector('.blog-aside__block-btn')
 // const inputWrapper = document.getElementsByClassName('input-wrapper')
 // let searchSelectionLength
 // TODO neeeeeeed  Animation and close other blocks title
@@ -58,7 +58,7 @@ if (window.innerWidth <= 700) {
 
 
 //   // Так как я не смог придумать что делать с текстом блока когда заходит за пределы блока то я решил огранчить сам инпут и теперь заголовки блога не должни превишать 30символов и все ради тени...Тени наше все!
-//   const key = ['Enter', 'ArrowLeft', 'ArrowRight', 'Command', 'Meta', 'Backspace', 'End', 'Delete', 'Shift', 'CapsLock', 'Control', 'Alt', 'Insert', 'Home', 'NumLock', 'NumLockPause', 'ScrollLock']
+//   const key = ['Enter','ArrowUp','ArrowDown', 'ArrowLeft', 'ArrowRight', 'Command', 'Meta', 'Backspace', 'End', 'Delete', 'Shift', 'CapsLock', 'Control', 'Alt', 'Insert', 'Home', 'NumLock', 'NumLockPause', 'ScrollLock']
 //   if (event.altKey ||
 //     event.ctrlKey ||
 //     (event.key == 'Command') ||
@@ -76,37 +76,41 @@ if (window.innerWidth <= 700) {
 //     span.textContent = event.key
 //     if (textInput !== null) {
 //       textInput.append(span)
+//       setTimeout(()=> {
+//         console.log(textInputLetterArray[0])
+//         textInputLetterArray[0].remove()
+//       }, 2100)
 //     } else {
 //       return false
 //     }
 //   }
 
-//   if (event.keyCode === 8 &&
-//     textInputLetterArray.length > 0) {
-//     console.log(searchSelectionLength)
-//     if ( searchSelectionLength === 1) {
-//       console.log(textInputLetterArray)
-//       textInputLetterArray[textInputLetterArray.length - searchSelectionLength].remove()
-//     } else {
-//       textInputLetterArray = textInputLetterArray.splice(textInputLetterArray.length - 1, searchSelectionLength)
-//       console.log(textInputLetterArray)
-//     }
+  // if (event.keyCode === 8 &&
+  //   textInputLetterArray.length > 0) {
+  //   console.log(searchSelectionLength)
+  //   if ( searchSelectionLength === 1) {
+  //     console.log(textInputLetterArray)
+  //     textInputLetterArray[textInputLetterArray.length - searchSelectionLength].remove()
+  //   } else {
+  //     textInputLetterArray = textInputLetterArray.splice(textInputLetterArray.length - 1, searchSelectionLength)
+  //     console.log(textInputLetterArray)
+  //   }
     
-//   } 
-//   // if (document.getSelection && event.keyCode == 8) {
-//   //   const selection = document.getSelection()
-//   //   console.log(selection.anchorNode.data)
-//   //   let childs = selection.selectAllChildren(textInput)
-//   //   console.log(childs)
-//   //   // selection.deleteFromDocument()
-//   // } 
-//   // else if (event.keyCode === 8 &&
-//   //   textInputLetter !== null &&
-//   //   textInputLetterArray.length > 0) {
-//   //   const selection = document.getSelection()
-//   //   selection.deleteFromDocument()
-//   //   console.log('delete select part')
-//   // }
+  // } 
+  // if (document.getSelection && event.keyCode == 8) {
+  //   const selection = document.getSelection()
+  //   console.log(selection.anchorNode.data)
+  //   let childs = selection.selectAllChildren(textInput)
+  //   console.log(childs)
+  //   // selection.deleteFromDocument()
+  // } 
+  // else if (event.keyCode === 8 &&
+  //   textInputLetter !== null &&
+  //   textInputLetterArray.length > 0) {
+  //   const selection = document.getSelection()
+  //   selection.deleteFromDocument()
+  //   console.log('delete select part')
+  // }
 // })
 // // Its working bugs 
 // // not working ctrl + z

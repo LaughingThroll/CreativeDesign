@@ -1,19 +1,8 @@
-- var title = ['Lian Creative Agency', 'Lian Creative Agency2', 'Lian Creative Agency3'];
-- var subtitle = ['Minimal frelance portfolio', 'Minimal frelance portfolio10', 'Minimal frelance portfolio12'] 
-
-mixin slider-index__item(title, subtitle)
-  .big-banner__slider-item.swiper-slide
-    .main-title
-      h1.main-title__title #{title}
-      .main-title__subtitle #{subtitle}
-
-
 section.big-banner(style="background-image: url(images/banners/index-banner.jpg)")
   .container
     #js-big-banner__slider.big-banner__slider
       .js-big-banner__slider-track.swiper-wrapper
-        - for (let i= 0; i < 3; i++)
-          +slider-index__item(title[i], subtitle[i]) 
+        //- item Generation in js use Database Firebase
       button(type="button" role="button" aria-label="Previous").big-banner__slider-arrow.big-banner__slider-arrow--prev
         img(src="images/icon/left-arrow.png") 
       button(type="button" role="button" aria-label="Next").big-banner__slider-arrow.big-banner__slider-arrow--next
