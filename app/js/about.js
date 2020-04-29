@@ -1,3 +1,2 @@
-import {helperFuncNotOnehundred} from '../module/_skills/skills';
-
-helperFuncNotOnehundred()
+// import '../js/main.js'
+import  '../module/_skills/skills';

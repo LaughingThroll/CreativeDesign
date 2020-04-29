@@ -1,0 +1,98 @@
+@keyframes up {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes down {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(10px);
+	}
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes leftToRightLoop {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 5px;
+	}
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInLeft {
+	from {
+	  transform: translate3d(-100%, 0, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+
+  @keyframes fadeInRight {
+	from {
+	  transform: translate3d(100%, 0, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	}
+  }
+
+@keyframes pulse {
+	to {
+		transform: scale(1.5);
+		background-color: #fff;
+		opacity: 0;
+	}
+}
+
+@keyframes color {
+	to {
+		color: #fff;
+	}
+}
+
+
+

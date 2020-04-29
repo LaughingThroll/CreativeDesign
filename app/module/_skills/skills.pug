@@ -1,11 +1,10 @@
 - let title = ['Branding', 'Photography', 'Web Design', 'Phototshop'];
-- let stylePercent = ["width: 90%;", 'width: 100%;', 'width: 39%;', 'width: 85%;'];
 - let textPercent =['90%', '100%', '39%', '85%'];
-mixin skill-our__item(title, stylePercent, textPercent)
+mixin skill-our__item(title, textPercent)
   .skill-our__item
     h5.skill-our__title.inner__title #{title} 
     .skill-our__progress 
-      .skill-our__progress-line(style=stylePercent)
+      .skill-our__progress-line
         .skill-our__progress-circle
         .skill-our__progress-percent #{textPercent}
 
@@ -25,4 +24,4 @@ section.skills
         .skill-our 
           h3.small-title Our Skills
           - for(let i = 0; i < title.length; i++)
-            +skill-our__item(title[i], stylePercent[i], textPercent[i])
+            +skill-our__item(title[i], textPercent[i])

@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
 const jsBigBannerSliderTrack = document.querySelector('.js-big-banner__slider-track')
-let bigBannerSlider = document.querySelector('#js-big-banner__slider');
+const bigBannerSlider = document.querySelector('#js-big-banner__slider');
+const mainTitle = document.getElementsByClassName('main-title')
+let swiper
 let opt = {
-  // cssMode: true,
-  // effect: 'fade',
   spaceBetween: 150,
   navigation: {
     nextEl: '.big-banner__slider-arrow--next',
@@ -13,7 +13,11 @@ let opt = {
     el: '.big-banner__slider-dots',
     clickable: true,
   },
-
+  // on: {
+  //   () {
+  //
+  //   }
+  // }
 }
 
 
@@ -24,27 +28,49 @@ function createBigBannerItem() {
   })
     .then(response => response.json())
     .then(response => {
-      console.log(response)
-
       response.reverse().forEach(item => {
         jsBigBannerSliderTrack.insertAdjacentHTML('afterbegin', `
 		  <div class="big-banner__slider-item swiper-slide">
 		  	<div class="main-title">
-		  		<h1 class="main-title__title"> ${item.title} </h1>
+		  		<h1 class="main-title__title"><span> ${item.title} </span></h1>
 		  		<div class="main-title__subtitle"> ${item.subtitle} </div>
 		  	</div>
 		  </div>
 		`)
-
       })
     })
     .then(() => {
-      // let indexSlider = () => {
-        new Swiper(bigBannerSlider, opt);
-      // }
+      swiper = new Swiper(bigBannerSlider, opt);
+      // Animation item in slider
+      swiper.on('slideChange', function () {
+        const thisMainTitle = mainTitle[this.realIndex].children[0]
+        const thisMainSubtitle = mainTitle[this.realIndex].children[1]
+        thisMainTitle.style.display = 'none'
+        thisMainSubtitle.style.display = 'none'
+
+        raf(function () {
+          thisMainTitle.style.display = 'block'
+          thisMainSubtitle.style.display = 'block'
+        })
+
+      })
+      swiper.init()
     })
-  }  
-export {  createBigBannerItem }
+}
+
+function raf(fn) {
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      fn()
+    })
+  })
+}
+
+
+
+
+
+export { createBigBannerItem }
 
 
 

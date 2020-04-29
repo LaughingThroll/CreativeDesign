@@ -18,25 +18,46 @@
     height: 42px;
     background-color: $black;
     border-radius: 50%;
-    transition: all .3s;
+    transition: all 0.3s;
     z-index: 51;
+    img {
+      transition: all 0.4s ease-in;
+    }
     &--prev {
       left: -75px;
-       
+      &:hover {
+        img {
+          transform: translateX(-2px);
+        }
+      }
     }
     &--next {
       right: -75px;
+      &:hover {
+        img {
+          transform: translateX(2px);
+        }
+      }
     }
   }
   .swiper-button-disabled {
     border: 1px solid $white;
     background-color: transparent;
   }
+  .big-banner__slider-arrow--prev.swiper-button-disabled,
+  .big-banner__slider-arrow--next.swiper-button-disabled {
+    &:hover {
+      img {
+        transform: translateX(0);
+      }
+    }
+  }
   .big-banner__slider-dots {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     bottom: -200px;
     left: 0;
-    right: 0; 
+    right: 0;
     text-align: center;
     .swiper-pagination-bullet {
       @include resetButton;
@@ -45,20 +66,25 @@
       width: 12px;
       height: 12px;
       opacity: 1;
+      border: 0 solid $black;
+      transition: border 0.5s ease-in;
       &-active {
+        transition: border 0.5s ease-in-out;
         border: 3px solid $black;
       }
     }
   }
-} 
+}
 
 .dark-theme {
   .big-banner__slider .big-banner__slider-dots {
-		.swiper-pagination-bullet {
-			background-color: #000;
-			&-active {
-				border-color: #fff;
-			}
-		}
-	}
+    .swiper-pagination-bullet {
+      background-color: #000;
+      &-active {
+        border-color: #fff;
+      }
+    }
+  }
 }
+
+// Animation

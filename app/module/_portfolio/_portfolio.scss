@@ -2,8 +2,30 @@
   padding: 2.4rem 0 9.6rem;
   text-align: center;
   &-nav {
-    border-top: 1px solid $borderColor;
-    border-bottom: 1px solid $borderColor;
+    position: relative;
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 0;
+      background-color: #fff;
+      transition: all 2s ease-in;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
+    &--active-anim {
+      &::before,
+      &::after {
+        width: 100%;
+      }
+    }
   }
   &-list {
     @include resetUl;
@@ -11,6 +33,7 @@
     &__plank {
       display: inline-block;
       padding: 0 15px;
+      opacity: 0;
       position: relative;
       &::before {
         content: '';
@@ -42,17 +65,29 @@
 
 .portfolio-gallery {
   &__items {
+    transition: height .5s ease-in;
     padding: 30px 0;
     column-count: 3;
     margin-left: -20px;
   }
-} 
+}
+
+.pulse__anim {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: scale(0);
+  background-color: #000;
+  border-radius: 50%;
+  animation: pulse .7s ease-in;
+}
 
 .portfolio-gallery__item {
   display: inline-block;
   position: relative;
   margin-bottom: 30px;
   margin-left: 20px;
+  animation: fade 1s ease forwards;
   &:hover::before {
     opacity: 1;
   }
@@ -70,24 +105,9 @@
     opacity: 0;
     transition: all 1s;
   }
-  // &-description {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(#000, .5);
-  //   opacity: 0;
-  //   transition: all 1s;
-  //   button {
-  //     @include resetButton;
-  //   }
-  // }
   .portfolio-gallery__item--active {
     display: inline-block;
+    animation: fade 1s ease-in forwards;
   }
 }
 
@@ -108,6 +128,7 @@
       }
       &--active {
         box-shadow: 6px 3px 3px #fff;
+        transition: box-shadow .5s ease-in;
         &:active {
           box-shadow: 6px 3px 2px #fff;
         }
@@ -118,6 +139,9 @@
       z-index: 5;
       transform: skew(50deg);
       color:#000;
+    }
+    .pulse__anim {
+      background-color: #fff;
     }
   }
 }

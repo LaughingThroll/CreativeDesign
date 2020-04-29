@@ -62,17 +62,29 @@ img {
 //   -webkit-text-fill-color: #000 !important;
 // }
 
-input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
-input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="text"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="text"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
 //  end reset CSS
 // Logotype common
 .logo {
-	img {
-		display: block;
+	svg {
+		& + svg {
+			margin-left: 5px;
+		}
 	}
 }
 
@@ -81,7 +93,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	text-align: center;
 	max-width: 700px;
 	margin: 0 auto;
+
 	text-transform: uppercase;
+
 	// for other pages extends from main-title  CSS
 	&--left {
 		max-width: 600px;
@@ -102,12 +116,21 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 		background-color: $black;
 		margin-bottom: 30px;
 		line-height: 60px;
+		opacity: 0;
+		// transition: opacity 1s ease;
+		animation: fade .5s .3s ease-in forwards;
+		span {
+			opacity: 0;
+			animation: fade .5s .7s ease-in forwards;
+		}
 	}
 	&__subtitle {
 		font-weight: 300;
 		font-size: 18px;
 		letter-spacing: 4px;
 		color: $black;
+		opacity: 0;
+			animation: fade 0.5s .3s ease-in forwards;
 	}
 }
 // load btn for load file) on index.html,  blog.html
@@ -123,6 +146,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	font-size: 13px;
 	line-height: 20px;
 	letter-spacing: 0.5px;
+	position: relative;
+	overflow: hidden;
+	span {
+		position: relative;
+		z-index: 2;
+	}
 }
 
 // title on about.html
@@ -176,10 +205,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 		@include resetLink;
 		color: $textColor;
 		&::before {
-			transition: all .3s ease-in;
+			transition: all 0.3s ease-in;
 		}
 	}
-	
 }
 
 // start this classes have  single-post.html and contact.html
@@ -192,7 +220,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	padding: 0 10px;
 	border-radius: 2px;
 	outline: none;
-	transition: all .5s;
+	transition: all 0.5s;
 	&::placeholder {
 		font-style: italic;
 	}
@@ -219,28 +247,25 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 // start Dark Theme
 .dark-theme {
+	// transition: 1s ease-in-out;
 	background-color: #0e0e0e;
 	color: #fff;
-	// input:-webkit-autofill,
-	// input:-webkit-autofill:hover,
-	// input:-webkit-autofill:focus,
-	// input:-webkit-autofill:active {
-  // 	-webkit-box-shadow: 0 0 0px 10em #000 inset !important;
-  // 	-webkit-text-fill-color: #fff !important;
-	// }
-	// input::-webkit-input-placeholder,
-	// textarea::-webkit-input-placeholder {
-  //   color: #fff;
-  //   text-shadow: #fff;
-  //   -webkit-text-fill-color: #fff;
-	// }
 	a {
 		color: #fff;
 	}
+
 	button {
 		color: #fff;
 		&::before {
 			color: #fff;
+		}
+	}
+	#bulb,
+	#light {
+		path {
+			fill: #fff;
+			text-shadow: 0 0 20px #fff;
+			animation: flicker 1s ease-out forwards;
 		}
 	}
 	.load__btn {
@@ -271,43 +296,17 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 	.our-value__item-title {
 		color: #fff;
 	}
-	.socials-list {
-		li:hover {
-			a::before {
-				text-shadow: 0 0 3px #fff;
-			}
-		}
-	}
-	// .input-wrapper {
-	// 	position: relative;
-	// 	input {
-	// 		color: #fff;
-	// 	}
-	// 	&__letters {
-	// 		position: absolute;
-	// 		top: 5px;
-	// 		left: 25px;
-	// 		span {
-	// 			display: inline-block;
-	// 		}
-	// 	}
-	// 	&__letter {
-	// 		animation: shadowLight 2s ease-in; 
-	// 	}
-	// 	&__space {
-	// 		width: 3.97px;
-	// 		height: 1px;
-	// 	}
-	// }
+	
 }
-
-
-// @keyframes shadowLight {
-// 	0% {
-// 		text-shadow: 0 0 2px #fff;
-// 	}
-// 	100% {
-// 		text-shadow: 0 0 0px #fff;
-// 	}
-// }
 // end Dark Theme
+//  START ANIMATION BLOCK
+// Logo
+#bulb {
+	animation: up 1s ease-in forwards;
+}
+#light {
+	animation: down 1s ease-in forwards;
+}
+// Logo
+
+// END ANIMATION BLOCK

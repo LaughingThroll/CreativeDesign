@@ -1,0 +1,12 @@
+<svg id="cross-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M778,1326.33h40v1.34H778v-1.34Z" transform="translate(-778 -1307)"/>
+  <path id="Rectangle_65_copy" data-name="Rectangle 65 copy" class="cls-1" d="M798.667,1307v40h-1.334v-40h1.334Z" transform="translate(-778 -1307)"/>
+</svg>

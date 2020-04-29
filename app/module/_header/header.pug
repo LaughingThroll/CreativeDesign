@@ -2,7 +2,7 @@ header.header
   .container
     .header__inner
       a(href="#").header__logo.logo
-        img(src="gs://creativedesignfirebase.appspot.com/logo.png")
+        include ../util/logo/logo.pug
       nav.header__nav
         ul.header__list#js-header__list
           li
@@ -20,9 +20,6 @@ header.header
           li
             a(href="./contact.html").header__link 
               span Контакты 
-        //- .header__search    
-        //-   button(type="button").header__search-btn.header__search-btn--active#js-header__search-btn
-        //-   input(type="text" placeholder="Search").header__search-input.default__input
         button(type="button").burger__menu#js-burger__menu
           <span></span>
           <span></span>
